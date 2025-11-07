@@ -3,7 +3,7 @@ import Link from "next/link";
 const services = [
   {
     title: "Public speaking",
-    price: "from €3,500",
+    price: "from €750",
     duration: "45–60 minute keynote or panel",
     description:
       "Dynamic keynotes and panels covering cybersecurity, Microsoft cloud, GTM growth, and the future of managed services.",
@@ -15,7 +15,7 @@ const services = [
   },
   {
     title: "Training & workshops",
-    price: "from €4,800",
+    price: "from €1,200",
     duration: "Half- or full-day format",
     description:
       "Hands-on enablement programs that elevate technical and commercial capabilities inside MSP teams.",
@@ -27,7 +27,7 @@ const services = [
   },
   {
     title: "Consultancy",
-    price: "from €2,200 / month",
+    price: "from €600 / month",
     duration: "90-day sprint minimum",
     description:
       "Strategic advisory on positioning, service design, and operational excellence that keeps MSPs future-ready.",
@@ -42,7 +42,7 @@ const services = [
 const packages = [
   {
     name: "Momentum Sprint",
-    price: "€6,500",
+    price: "€1,500",
     description: "Two-day onsite or virtual workshop focused on Microsoft 365, security baselines, and GTM activation.",
     includes: [
       "Pre-engagement discovery and stakeholder interviews",
@@ -52,7 +52,7 @@ const packages = [
   },
   {
     name: "Launch Partner Program",
-    price: "€9,800",
+    price: "€2,400",
     description: "Advisory retainer pairing GTM strategy with enablement assets to launch a new managed service.",
     includes: [
       "Positioning workshop and messaging architecture",
@@ -62,7 +62,7 @@ const packages = [
   },
   {
     name: "Event Accelerator",
-    price: "€4,200",
+    price: "€950",
     description: "Keynote plus breakout or VIP roundtable, complete with promotional content and follow-up assets.",
     includes: [
       "Custom session narrative and visuals",
@@ -151,7 +151,7 @@ export default function ServicesPage() {
 
         <div className="alert" style={{ marginTop: "2.5rem" }}>
           <strong>Need something bespoke?</strong> Combine services or request a
-          tailored program — most custom engagements start at €1,850.
+          tailored program — most custom engagements start at €780.
         </div>
 
         <div className="divider" />
