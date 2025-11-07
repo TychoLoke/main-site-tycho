@@ -78,6 +78,25 @@ const videoShowcase = [
   }
 ];
 
+const leadershipHighlights = [
+  {
+    title: "Community Hackers Love",
+    role: "Co-Founder",
+    description:
+      "Building a global collective of security storytellers and creators who champion human-first cyber education.",
+    href: "https://www.hackerslove.com",
+    cta: "Visit Hackers Love"
+  },
+  {
+    title: "Above The Stack",
+    role: "Founder",
+    description:
+      "Designing the channel enablement platform that helps MSP leaders ship smarter GTM plays and partnerships.",
+    href: "/abovethestack",
+    cta: "Explore Above The Stack"
+  }
+];
+
 const testimonials = [
   {
     quote:
@@ -129,6 +148,31 @@ export default function HomePage() {
                 priority
               />
             </figure>
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <h2 className="section-title">Community leadership</h2>
+          <p className="section-lead">
+            Beyond the stage, I invest in platforms that elevate cybersecurity and channel innovators through collaboration and storytelling.
+          </p>
+          <div className="grid grid--two">
+            {leadershipHighlights.map((item) => (
+              <article className="card" key={item.title}>
+                <h3>{item.title}</h3>
+                <p className="badge" style={{ margin: "0.75rem 0" }}>
+                  {item.role}
+                </p>
+                <p>{item.description}</p>
+                <div style={{ marginTop: "1.5rem" }}>
+                  <Link href={item.href} className="button" target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
+                    {item.cta}
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
