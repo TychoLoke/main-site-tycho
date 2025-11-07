@@ -6,7 +6,9 @@ const events = [
     description:
       "The #1 internet infrastructure event, gathering the global cloud ecosystem for innovation, partnership, and celebration.",
     attending: "Attending all days",
-    registration: "https://cloudfest.com/"
+    status: "Upcoming",
+    registration: "https://cloudfest.com/",
+    ctaLabel: "Get tickets"
   },
   {
     name: "CompTIA Community Meetings",
@@ -15,7 +17,9 @@ const events = [
     description:
       "Facilitating cybersecurity and MSP growth conversations as part of the Benelux executive council.",
     attending: "Hosting breakout",
-    registration: "https://connect.comptia.org/communities/benelux"
+    status: "Save the date",
+    registration: "https://connect.comptia.org/communities/benelux",
+    ctaLabel: "Join the community"
   },
   {
     name: "Above The Stack Live Webinar",
@@ -24,7 +28,45 @@ const events = [
     description:
       "Exclusive briefing for MSP leaders covering GTM plays, Microsoft roadmap updates, and security intelligence.",
     attending: "Hosting",
-    registration: "https://tycholoke.com/abovethestack"
+    status: "Registration open",
+    registration: "https://tycholoke.com/abovethestack",
+    ctaLabel: "Reserve your seat"
+  }
+];
+
+const pastHighlights = [
+  {
+    title: "Managed Services Summit Benelux 2024",
+    takeaway: "Hosted a panel on sustainable MSP growth and launched the Security Storytelling Lab preview.",
+    link: "https://managedservicessummit.com/benelux",
+    label: "Summit recap"
+  },
+  {
+    title: "Cloud Expo Netherlands Main Stage",
+    takeaway: "Delivered the Power Trio talk — data classification, access control, and AI for modern MSPs.",
+    link: "https://www.cloudexpoeurope.nl/",
+    label: "Event site"
+  },
+  {
+    title: "Pax8 Beyond EMEA",
+    takeaway: "Led partner enablement sessions on storefront best practices and automation",
+    link: "https://www.pax8.com/en-uk/blog/beyond-emea-people-rock-case-study/",
+    label: "Case study"
+  }
+];
+
+const formats = [
+  {
+    name: "Keynotes & fireside chats",
+    details: "45-60 minute sessions with bespoke visuals and audience interaction."
+  },
+  {
+    name: "Workshops & masterclasses",
+    details: "Half-day to multi-day trainings with labs, worksheets, and playbooks."
+  },
+  {
+    name: "Roundtables & moderation",
+    details: "Curated conversations for executive groups or partner advisory councils."
   }
 ];
 
@@ -45,6 +87,7 @@ export default function EventsPage() {
         <div className="grid grid--two">
           {events.map((event) => (
             <article className="event-card" key={event.name}>
+              <div className="event-card-status">{event.status}</div>
               <span>{event.dates}</span>
               <strong>{event.name}</strong>
               <p>{event.description}</p>
@@ -55,13 +98,43 @@ export default function EventsPage() {
                 <strong style={{ color: "var(--accent)" }}>Tycho:</strong> {event.attending}
               </p>
               <a className="button" href={event.registration} target="_blank" rel="noreferrer">
-                Registration & info
+                {event.ctaLabel ?? "Registration & info"}
               </a>
             </article>
           ))}
         </div>
 
         <div className="divider" />
+
+        <h2 className="section-title">Recent highlights</h2>
+        <div className="grid grid--three">
+          {pastHighlights.map((highlight) => (
+            <article className="card" key={highlight.title}>
+              <h3>{highlight.title}</h3>
+              <p>{highlight.takeaway}</p>
+              <div style={{ marginTop: "1.25rem" }}>
+                <a className="button button--ghost" href={highlight.link} target="_blank" rel="noreferrer">
+                  {highlight.label}
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="divider" />
+
+        <div className="grid grid--three">
+          {formats.map((format) => (
+            <article className="card" key={format.name}>
+              <h3>{format.name}</h3>
+              <p>{format.details}</p>
+            </article>
+          ))}
+        </div>
+
+        <div className="alert" style={{ marginTop: "2.5rem" }}>
+          Looking for promotional assets? Ask for the event media kit with headshots, bios, and AV requirements.
+        </div>
 
         <div className="card">
           <h2 className="section-title" style={{ marginBottom: "1rem" }}>

@@ -16,7 +16,7 @@ const NAV_SECTIONS = [
       { label: "Services", href: "/services" },
       { label: "Events", href: "/events" },
       { label: "Contact", href: "/contact" },
-      { label: "AboveTheStack", href: "/abovethestack" }
+      { label: "Above The Stack", href: "https://abovethestack.com", external: true }
     ]
   }
 ];
@@ -45,7 +45,13 @@ export function SiteFooter() {
               <ul style={{ listStyle: "none", padding: 0, margin: 0, color: "rgba(226,232,240,0.7)", display: "grid", gap: "0.6rem" }}>
                 {section.items.map((item) => (
                   <li key={item.href}>
-                    <Link href={item.href}>{item.label}</Link>
+                    {item.external ? (
+                      <a href={item.href} target="_blank" rel="noreferrer">
+                        {item.label}
+                      </a>
+                    ) : (
+                      <Link href={item.href}>{item.label}</Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -84,6 +90,9 @@ export function SiteFooter() {
           <div style={{ display: "flex", gap: "1rem" }}>
             <Link href="mailto:info@tycholoke.com">info@tycholoke.com</Link>
             <Link href="/contact">Contact</Link>
+            <a href="https://abovethestack.com" target="_blank" rel="noreferrer">
+              Above The Stack
+            </a>
           </div>
         </div>
       </div>
