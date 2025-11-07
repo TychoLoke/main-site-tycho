@@ -50,19 +50,19 @@ const experiences = [
     }
   },
   {
-    role: "Operations Manager",
-    org: "Skynode",
+    role: "Co-Founder & Operations Manager",
+    org: "Serverwave",
     period: "Mar 2020 - Current",
     summary:
-      "Built resilient operational processes and infrastructure for a global gaming server provider while elevating support excellence.",
+      "Co-founded Serverwave, steering operations, partnerships, and service innovation for a global infrastructure provider serving modern gaming communities.",
     highlights: [
-      "Scaled technical teams and 24/7 support operations globally.",
-      "Optimized cost structures through automation and vendor partnerships.",
-      "Championed customer success initiatives that drove retention."
+      "Architected scalable provisioning pipelines that delivered consistent customer experiences.",
+      "Led cross-functional operations teams across support, finance, and vendor management.",
+      "Cultivated community partnerships that accelerated Serverwave's growth and reach."
     ],
     logo: {
-      fileName: "skynode.svg",
-      alt: "Skynode logo"
+      fileName: "serverwave.svg",
+      alt: "Serverwave logo"
     }
   }
 ];
@@ -70,17 +70,17 @@ const experiences = [
 const leadership = [
   {
     role: "Vice Chair Benelux Cyber Security Interest Group",
-    org: "CompTIA",
+    org: "GTIA",
     period: "Jan 2025 - Current"
   },
   {
     role: "Executive Council Member Benelux Community",
-    org: "CompTIA",
+    org: "GTIA",
     period: "Jan 2025 - Current"
   },
   {
     role: "Industry Education SME & Instructor",
-    org: "CompTIA",
+    org: "GTIA",
     period: "Jan 2025 - Current"
   }
 ];
@@ -109,10 +109,6 @@ export default function ExperiencesPage() {
                     height={120}
                     sizes="(max-width: 640px) 220px, 320px"
                   />
-                  <figcaption className="image-note">
-                    Save a horizontal logo as <code>{experience.logo.fileName}</code> (recommended 320×120) in <code>public/logos</code> to
-                    replace this placeholder.
-                  </figcaption>
                 </figure>
               ) : null}
               <h3>{experience.role}</h3>

@@ -60,8 +60,12 @@ export default function AboutPage() {
             </p>
             <p>
               Beyond architecture and process, I love connecting with people. You
-              can find me on stage across Europe, inside community councils at
-              CompTIA, or collaborating on industry podcasts and case studies.
+              can find me on stage across Europe, leading community initiatives
+              as the owner of Above The Stack, co-founding the {" "}
+              <Link href="https://www.hackerslove.com" target="_blank">
+                Hackers Love Community
+              </Link>
+              , and collaborating within GTIA councils, podcasts, and case studies.
             </p>
             <p>
               Outside the professional arena I’m an avid traveler, Formula 1
