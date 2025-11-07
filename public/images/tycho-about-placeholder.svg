@@ -1,23 +1,23 @@
 <svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1200" height="1500" rx="60" fill="url(#paint0_radial_about)"/>
-  <rect x="64" y="80" width="1072" height="1340" rx="52" fill="url(#paint1_linear_about)" stroke="rgba(94, 234, 212, 0.3)" stroke-width="2"/>
+  <rect x="64" y="80" width="1072" height="1340" rx="52" fill="url(#paint1_linear_about)" stroke="rgba(244, 63, 94, 0.3)" stroke-width="2"/>
   <g opacity="0.35">
-    <circle cx="340" cy="420" r="160" fill="#22D3EE"/>
-    <circle cx="880" cy="520" r="220" fill="#6366F1"/>
-    <circle cx="520" cy="980" r="180" fill="#38BDF8"/>
+    <circle cx="340" cy="420" r="160" fill="#F43F5E"/>
+    <circle cx="880" cy="520" r="220" fill="#FB7185"/>
+    <circle cx="520" cy="980" r="180" fill="#BE123C"/>
   </g>
-  <rect x="280" y="420" width="640" height="820" rx="48" fill="rgba(15, 23, 42, 0.72)" stroke="rgba(56, 189, 248, 0.32)" stroke-width="2"/>
-  <text x="600" y="740" text-anchor="middle" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="48" font-weight="600" fill="rgba(226, 232, 240, 0.9)">Replace with 1200×1500 portrait</text>
-  <text x="600" y="820" text-anchor="middle" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="36" font-weight="500" fill="rgba(148, 163, 184, 0.9)">Save as /public/images/tycho-about.jpg</text>
+  <rect x="280" y="420" width="640" height="820" rx="48" fill="rgba(36, 0, 12, 0.72)" stroke="rgba(244, 63, 94, 0.32)" stroke-width="2"/>
+  <text x="600" y="740" text-anchor="middle" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="48" font-weight="600" fill="rgba(255, 228, 236, 0.9)">Replace with 1200×1500 portrait</text>
+  <text x="600" y="820" text-anchor="middle" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="36" font-weight="500" fill="rgba(255, 214, 224, 0.9)">Save as /public/images/tycho-about.jpg</text>
   <defs>
     <radialGradient id="paint0_radial_about" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(180 220) rotate(45) scale(1400 1400)">
-      <stop stop-color="#0EA5E9" stop-opacity="0.4"/>
-      <stop offset="0.5" stop-color="#0F172A"/>
-      <stop offset="1" stop-color="#020617"/>
+      <stop stop-color="#F43F5E" stop-opacity="0.4"/>
+      <stop offset="0.5" stop-color="#3C0014"/>
+      <stop offset="1" stop-color="#140008"/>
     </radialGradient>
     <linearGradient id="paint1_linear_about" x1="200" y1="180" x2="1000" y2="1310" gradientUnits="userSpaceOnUse">
-      <stop stop-color="rgba(15, 23, 42, 0.95)"/>
-      <stop offset="1" stop-color="rgba(12, 26, 45, 0.95)"/>
+      <stop stop-color="rgba(60, 0, 20, 0.95)"/>
+      <stop offset="1" stop-color="rgba(34, 0, 12, 0.95)"/>
     </linearGradient>
   </defs>
 </svg>

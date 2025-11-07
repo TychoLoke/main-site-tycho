@@ -1,6 +1,6 @@
 <svg width="1200" height="1500" viewBox="0 0 1200 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1200" height="1500" rx="60" fill="url(#paint0_radial_hero)"/>
-  <rect x="60" y="60" width="1080" height="1380" rx="48" fill="url(#paint1_linear_hero)" fill-opacity="0.9" stroke="rgba(148, 163, 184, 0.35)" stroke-width="2"/>
+  <rect x="60" y="60" width="1080" height="1380" rx="48" fill="url(#paint1_linear_hero)" fill-opacity="0.9" stroke="rgba(255, 214, 224, 0.35)" stroke-width="2"/>
   <g filter="url(#filter0_d_hero)">
     <circle cx="460" cy="520" r="160" fill="url(#paint2_radial_hero)" fill-opacity="0.9"/>
   </g>
@@ -8,14 +8,14 @@
     <circle cx="760" cy="420" r="120" fill="url(#paint3_radial_hero)" fill-opacity="0.7"/>
   </g>
   <g filter="url(#filter2_d_hero)">
-    <rect x="340" y="760" width="520" height="480" rx="36" fill="rgba(15, 23, 42, 0.65)" stroke="rgba(56, 189, 248, 0.28)" stroke-width="2"/>
+    <rect x="340" y="760" width="520" height="480" rx="36" fill="rgba(36, 0, 12, 0.65)" stroke="rgba(244, 63, 94, 0.32)" stroke-width="2"/>
     <path d="M420 930C420 862.095 474.095 808 542 808H658C725.905 808 780 862.095 780 930V930C780 997.905 725.905 1052 658 1052H542C474.095 1052 420 997.905 420 930V930Z" fill="url(#paint4_linear_hero)"/>
-    <rect x="420" y="844" width="340" height="20" rx="10" fill="rgba(94, 234, 212, 0.45)"/>
-    <rect x="420" y="880" width="220" height="16" rx="8" fill="rgba(14, 197, 240, 0.35)"/>
-    <rect x="420" y="1110" width="140" height="14" rx="7" fill="rgba(148, 163, 184, 0.5)"/>
-    <rect x="580" y="1110" width="200" height="14" rx="7" fill="rgba(148, 163, 184, 0.35)"/>
+    <rect x="420" y="844" width="340" height="20" rx="10" fill="rgba(244, 63, 94, 0.45)"/>
+    <rect x="420" y="880" width="220" height="16" rx="8" fill="rgba(225, 29, 72, 0.35)"/>
+    <rect x="420" y="1110" width="140" height="14" rx="7" fill="rgba(255, 214, 224, 0.5)"/>
+    <rect x="580" y="1110" width="200" height="14" rx="7" fill="rgba(255, 214, 224, 0.35)"/>
   </g>
-  <text x="600" y="1340" text-anchor="middle" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="42" font-weight="600" fill="rgba(226, 232, 240, 0.9)">Upload 1200×1500 portrait to /public/images/tycho-hero.jpg</text>
+  <text x="600" y="1340" text-anchor="middle" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="42" font-weight="600" fill="rgba(255, 228, 236, 0.9)">Upload 1200×1500 portrait to /public/images/tycho-hero.jpg</text>
   <defs>
     <filter id="filter0_d_hero" x="240" y="300" width="440" height="440" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
       <feGaussianBlur stdDeviation="40"/>
@@ -27,25 +27,25 @@
       <feGaussianBlur stdDeviation="12" result="blur"/>
     </filter>
     <radialGradient id="paint0_radial_hero" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(960 120) rotate(135) scale(1320 1320)">
-      <stop stop-color="#38BDF8" stop-opacity="0.35"/>
-      <stop offset="0.45" stop-color="#0F172A"/>
-      <stop offset="1" stop-color="#020617"/>
+      <stop stop-color="#F43F5E" stop-opacity="0.35"/>
+      <stop offset="0.45" stop-color="#3C0014"/>
+      <stop offset="1" stop-color="#140008"/>
     </radialGradient>
     <linearGradient id="paint1_linear_hero" x1="60" y1="60" x2="1140" y2="1440" gradientUnits="userSpaceOnUse">
-      <stop stop-color="rgba(15, 23, 42, 0.95)"/>
-      <stop offset="1" stop-color="rgba(12, 20, 38, 0.95)"/>
+      <stop stop-color="rgba(60, 0, 20, 0.95)"/>
+      <stop offset="1" stop-color="rgba(34, 0, 12, 0.95)"/>
     </linearGradient>
     <radialGradient id="paint2_radial_hero" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(460 520) rotate(90) scale(160)">
-      <stop stop-color="#0EA5E9"/>
-      <stop offset="1" stop-color="rgba(14, 165, 233, 0)"/>
+      <stop stop-color="#F43F5E"/>
+      <stop offset="1" stop-color="rgba(244, 63, 94, 0)"/>
     </radialGradient>
     <radialGradient id="paint3_radial_hero" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(760 420) rotate(90) scale(120)">
-      <stop stop-color="#6366F1"/>
-      <stop offset="1" stop-color="rgba(99, 102, 241, 0)"/>
+      <stop stop-color="#F973A6"/>
+      <stop offset="1" stop-color="rgba(249, 115, 166, 0)"/>
     </radialGradient>
     <linearGradient id="paint4_linear_hero" x1="420" y1="808" x2="780" y2="1052" gradientUnits="userSpaceOnUse">
-      <stop stop-color="rgba(56, 189, 248, 0.6)"/>
-      <stop offset="1" stop-color="rgba(14, 165, 233, 0.15)"/>
+      <stop stop-color="rgba(244, 63, 94, 0.6)"/>
+      <stop offset="1" stop-color="rgba(225, 29, 72, 0.2)"/>
     </linearGradient>
   </defs>
 </svg>
