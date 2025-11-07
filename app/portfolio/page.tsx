@@ -3,120 +3,91 @@ import Link from "next/link";
 const mediaReels = [
   {
     title: "ESET · Partners in Security",
-    description: "Highlighting the human side of cybersecurity and awareness programs.",
+    description:
+      "Human-first cybersecurity storytelling with Regional Manager Ashley Schut from ESET Netherlands.",
     embedUrl: "https://www.youtube.com/embed/tKrXQhlzTOo",
     cta: "Watch on YouTube",
     href: "https://youtu.be/tKrXQhlzTOo?list=TLGGs3T-M0BINnowNzExMjAyNQ"
   },
   {
     title: "Pax8 StoreFronts",
-    description: "Marketplace storytelling and storefront strategies that convert.",
+    description: "Marketplace storytelling and storefront strategies that convert for MSP partners.",
     embedUrl: "https://player.vimeo.com/video/1016152554?h=2b87157fc0",
     cta: "View on Vimeo",
     href: "https://vimeo.com/1016152554/2b87157fc0?fl=pl&fe=vl"
   },
   {
-    title: "AvePoint Baseline Management Webinar",
-    description: "Live enablement for partners rolling out Microsoft 365 baselines.",
+    title: "AvePoint Baselines Webinar",
+    description: "Deep dive into Microsoft 365 baselines, automation, and secure service delivery for partners.",
     embedUrl: "https://www.youtube.com/embed/8DJX_4rvjJQ",
     cta: "Watch webinar",
     href: "https://www.youtube.com/watch?v=8DJX_4rvjJQ"
   }
 ];
 
-const portfolioSections = [
+const portfolioHighlights = [
   {
-    title: "Stages & events",
-    summary:
-      "Keynotes and panels that translate Microsoft, security, and AI into action for MSP leaders.",
-    items: [
-      {
-        name: "Cloud Expo Netherlands",
-        description: "Main-stage talk on the power trio: data classification, access control, and AI.",
-        href: "https://www.cloudexpoeurope.nl/",
-        action: "Explore event"
-      },
-      {
-        name: "Managed Services Summit Benelux",
-        description: "Session on building repeatable service blueprints and high-trust GTM motions.",
-        href: "https://managedservicessummit.com/benelux",
-        action: "Summit site"
-      },
-      {
-        name: "GTIA Mechelen Meetup",
-        description: "Community workshop on security storytelling and Microsoft 365 governance.",
-        href: "https://www.linkedin.com/feed/update/urn:li:activity:7168835632559519744/",
-        action: "View recap"
-      },
-      {
-        name: "CloudFest",
-        description: "Delivered the AI & security track for MSPs embracing data-driven services.",
-        href: "https://www.cloudfest.com/",
-        action: "Event overview"
-      }
-    ]
+    title: "ESET Cyber Security Podcast 2025",
+    description:
+      "Together with Ashley Schut from ESET Netherlands I talk about the human aspect of cyber security.",
+    href: "https://www.youtube.com/watch?v=XGJdht8OVno",
+    action: "Listen to episode"
   },
   {
-    title: "Media & storytelling",
-    summary:
-      "Podcasts, case studies, and editorial features amplifying partner impact.",
-    items: [
-      {
-        name: "Partners in Security Podcast (ESET)",
-        description: "Discussed human-centric security and community activation.",
-        href: "https://www.youtube.com/watch?v=XGJdht8OVno",
-        action: "Watch episode"
-      },
-      {
-        name: "Pax8 Beyond EMEA Case Study",
-        description: "Showcased PeopleRock’s marketplace growth with Pax8.",
-        href: "https://www.pax8.com/en-uk/blog/beyond-emea-people-rock-case-study/",
-        action: "Read case study"
-      },
-      {
-        name: "MSP Global Social Spotlight",
-        description: "Featured insights on channel collaboration and enablement.",
-        href: "https://mspglobal.com/",
-        action: "Visit MSP Global"
-      },
-      {
-        name: "Tech Degenerates Podcast",
-        description: "Shared stories on automation, AI, and the future of MSP marketing.",
-        href: "https://techdegen.com/",
-        action: "Show page"
-      }
-    ]
+    title: "GTIA Mechelen Meetup February 2025",
+    description:
+      "Shared data classification and security insights with the GTIA Benelux community to inspire actionable change.",
+    href: "https://www.linkedin.com/feed/update/urn:li:activity:7168835632559519744/",
+    action: "Event recap"
   },
   {
-    title: "Advisory & enablement",
-    summary:
-      "Programs and workshops helping MSPs modernise delivery, GTM, and partner success.",
-    items: [
-      {
-        name: "AvePoint Partner Academy",
-        description: "Recurring enablement on Microsoft 365 baselines, automation, and co-sell readiness.",
-        href: "https://www.avepoint.com/",
-        action: "AvePoint"
-      },
-      {
-        name: "Acronis MSP All-Star Webinar",
-        description: "Playbooks for bundling security, backup, and Microsoft 365 protection.",
-        href: "https://www.acronis.com/en-us/events/webinar/",
-        action: "Request on-demand"
-      },
-      {
-        name: "Portland Den Expert Sessions",
-        description: "Live demos and Q&A for MSPs levelling up Microsoft 365 experiences.",
-        href: "https://portland.eu/",
-        action: "Visit Portland"
-      },
-      {
-        name: "Above The Stack Workshops",
-        description: "Community programs blending strategy sprints with AI-driven templates.",
-        href: "https://abovethestack.com/",
-        action: "Learn more"
-      }
-    ]
+    title: "Cloud Expo Netherlands 2024",
+    description:
+      "Main-stage session covering data classification, access control, and AI at the largest Cloud Expo in the Netherlands.",
+    href: "https://www.cloudexpoeurope.nl/",
+    action: "Explore Cloud Expo"
+  },
+  {
+    title: "Expert On Stage at Portland's Den 2024",
+    description:
+      "Shared Microsoft 365 experiences and best practices while engaging with a packed room of MSP innovators.",
+    href: "https://portland.eu/",
+    action: "Discover Portland"
+  },
+  {
+    title: "Speaker at CompTIA EMEA Con 2024",
+    description:
+      "Delivered 'The Power Trio: Data Classification, Access Control, and AI' for CompTIA members in London, UK.",
+    href: "https://connect.comptia.org/events/view/comptia-emea-members-and-partners-conference",
+    action: "About CompTIA EMEA Con"
+  },
+  {
+    title: "Case Study Pax8 Beyond EMEA 2024",
+    description:
+      "Produced a large-scale case study for Pax8 Beyond EMEA in Berlin that showcased PeopleRock's partner success story.",
+    href: "https://www.pax8.com/en-uk/blog/beyond-emea-people-rock-case-study/",
+    action: "View case study"
+  },
+  {
+    title: "Social segment for MSP Global",
+    description:
+      "Shared MSP Global experiences through LinkedIn and Instagram interviews that captured the event's energy.",
+    href: "https://mspglobal.com/",
+    action: "Visit MSP Global"
+  },
+  {
+    title: "Case Study Pax8",
+    description:
+      "Represented PeopleRock in a partner success story detailing our collaboration with industry leader Pax8.",
+    href: "https://www.pax8.com/",
+    action: "Visit Pax8"
+  },
+  {
+    title: "AvePoint Baselines Webinar",
+    description:
+      "Hosted a partner enablement webinar on AvePoint Baselines to align automation, governance, and compliance.",
+    href: "https://www.youtube.com/watch?v=8DJX_4rvjJQ",
+    action: "Watch webinar"
   }
 ];
 
@@ -159,27 +130,30 @@ export default function PortfolioPage() {
         </div>
 
         <div className="portfolio-sections">
-          {portfolioSections.map((section) => (
-            <section key={section.title} className="portfolio-section">
-              <div className="portfolio-section-header">
-                <h2>{section.title}</h2>
-                <p>{section.summary}</p>
-              </div>
-              <div className="portfolio-section-grid">
-                {section.items.map((item) => (
-                  <article className="card" key={item.name}>
-                    <h3>{item.name}</h3>
-                    <p>{item.description}</p>
+          <section className="portfolio-section">
+            <div className="portfolio-section-header">
+              <h2>Featured engagements</h2>
+              <p>
+                A curated collection of recent talks, collaborations, and media moments that highlight how I partner with MSPs
+                and vendors.
+              </p>
+            </div>
+            <div className="portfolio-section-grid">
+              {portfolioHighlights.map((item) => (
+                <article className="card" key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  {item.href ? (
                     <div style={{ marginTop: "1.25rem" }}>
                       <Link href={item.href} className="button button--ghost" target="_blank" rel="noreferrer">
-                        {item.action}
+                        {item.action ?? "Learn more"}
                       </Link>
                     </div>
-                  </article>
-                ))}
-              </div>
-            </section>
-          ))}
+                  ) : null}
+                </article>
+              ))}
+            </div>
+          </section>
         </div>
 
         <div className="card" style={{ marginTop: "3rem", padding: "2.5rem" }}>

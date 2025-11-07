@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const experiences = [
   {
@@ -85,6 +86,25 @@ const leadership = [
   }
 ];
 
+const communityPlatforms = [
+  {
+    title: "Hackers Love",
+    role: "Co-Founder",
+    description:
+      "Global collective of security storytellers and creators championing human-first cyber education.",
+    href: "https://www.hackerslove.com",
+    cta: "Visit Hackers Love"
+  },
+  {
+    title: "Above The Stack",
+    role: "Founder",
+    description:
+      "Channel enablement platform helping MSP leaders ship smarter GTM plays and partnerships.",
+    href: "/abovethestack",
+    cta: "Explore Above The Stack"
+  }
+];
+
 export default function ExperiencesPage() {
   return (
     <section className="section section--alt">
@@ -138,6 +158,37 @@ export default function ExperiencesPage() {
               <h3 style={{ marginTop: "0.75rem" }}>{item.role}</h3>
               <p style={{ color: "var(--muted)" }}>{item.org}</p>
             </div>
+          ))}
+        </div>
+
+        <div className="divider" />
+
+        <h2 className="section-title" style={{ fontSize: "2rem" }}>
+          Community platforms & programs
+        </h2>
+        <p className="section-lead" style={{ marginTop: "1rem", maxWidth: "58ch" }}>
+          Beyond client delivery I invest in communities that activate cybersecurity
+          storytelling and operational excellence for MSPs worldwide.
+        </p>
+        <div className="grid grid--two" style={{ marginTop: "2.5rem" }}>
+          {communityPlatforms.map((platform) => (
+            <article className="card" key={platform.title}>
+              <h3>{platform.title}</h3>
+              <p className="badge" style={{ margin: "0.75rem 0" }}>
+                {platform.role}
+              </p>
+              <p>{platform.description}</p>
+              <div style={{ marginTop: "1.5rem" }}>
+                <Link
+                  href={platform.href}
+                  className="button"
+                  target={platform.href.startsWith("http") ? "_blank" : undefined}
+                  rel={platform.href.startsWith("http") ? "noreferrer" : undefined}
+                >
+                  {platform.cta}
+                </Link>
+              </div>
+            </article>
           ))}
         </div>
 
