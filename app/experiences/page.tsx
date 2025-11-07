@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const experiences = [
   {
     role: "Channel Pre-Sales Solutions Engineer",
@@ -11,7 +13,7 @@ const experiences = [
       "Coach pre-sales teams on storytelling that connects technical depth to outcomes."
     ],
     logo: {
-      fileName: "avepoint-logo.png",
+      fileName: "avepoint.svg",
       alt: "AvePoint logo"
     }
   },
@@ -27,7 +29,7 @@ const experiences = [
       "Enabled sales teams with repeatable proof-of-concept playbooks."
     ],
     logo: {
-      fileName: "peoplerock-logo.png",
+      fileName: "peoplerock.svg",
       alt: "PeopleRock logo"
     }
   },
@@ -43,7 +45,7 @@ const experiences = [
       "Championed managed security services rooted in Zero Trust principles."
     ],
     logo: {
-      fileName: "peoplerock-logo.png",
+      fileName: "peoplerock.svg",
       alt: "PeopleRock logo"
     }
   },
@@ -59,7 +61,7 @@ const experiences = [
       "Championed customer success initiatives that drove retention."
     ],
     logo: {
-      fileName: "skynode-logo.png",
+      fileName: "skynode.svg",
       alt: "Skynode logo"
     }
   }
@@ -99,18 +101,19 @@ export default function ExperiencesPage() {
                 {experience.period} · {experience.org}
               </span>
               {experience.logo ? (
-                <div className="experience-logo-slot">
-                  <div
-                    className="experience-logo"
-                    style={{ backgroundImage: `url(/logos/${experience.logo.fileName})` }}
-                    role="img"
-                    aria-label={experience.logo.alt ?? `${experience.org} logo`}
+                <figure className="experience-logo-slot">
+                  <Image
+                    src={`/logos/${experience.logo.fileName}`}
+                    alt={experience.logo.alt ?? `${experience.org} logo`}
+                    width={320}
+                    height={120}
+                    sizes="(max-width: 640px) 220px, 320px"
                   />
-                  <p>
-                    Save a horizontal logo as <code>{experience.logo.fileName}</code> (recommended
-                    320px × 120px) in <code>public/logos</code> to display it here.
-                  </p>
-                </div>
+                  <figcaption className="image-note">
+                    Save a horizontal logo as <code>{experience.logo.fileName}</code> (recommended 320×120) in <code>public/logos</code> to
+                    replace this placeholder.
+                  </figcaption>
+                </figure>
               ) : null}
               <h3>{experience.role}</h3>
               <p>{experience.summary}</p>

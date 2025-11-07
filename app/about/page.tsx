@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const stats = [
@@ -16,11 +17,17 @@ export default function AboutPage() {
           A passion for IT, innovation, and helping MSPs grow
         </h1>
         <div className="about-hero">
-          <div className="about-portrait" aria-hidden="true" />
-          <p className="about-portrait-note">
-            Upload your photo as <code>tycho-about.jpg</code> in <code>public/images</code>
-            to replace this placeholder.
-          </p>
+          <figure className="about-portrait">
+            <Image
+              src="/images/tycho-about-placeholder.svg"
+              alt="Placeholder portrait for Tycho Loke"
+              width={600}
+              height={750}
+            />
+            <figcaption className="image-note">
+              Upload a 1200×1500 JPG named <code>tycho-about.jpg</code> inside <code>public/images</code> to replace this image.
+            </figcaption>
+          </figure>
         </div>
 
         <div className="stat-grid" style={{ margin: "2.5rem 0" }}>

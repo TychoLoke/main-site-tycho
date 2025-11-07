@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const trainingHighlights = [
@@ -30,28 +31,33 @@ const workshopOutcomes = [
   "Performance metrics so improvements stay measurable"
 ];
 
-const logoLabels = [
-  "AvePoint",
-  "GTIA",
-  "Pax8",
-  "Acronis",
-  "PeopleRock",
-  "Portland",
-  "Cloud Expo",
-  "CloudFest",
-  "Managed Services Summit Benelux",
-  "ESET",
-  "Cloud Factory",
-  "Huntress",
-  "Hackers Love",
-  "Q-Cyber",
-  "MKB-IT",
-  "IT-Synergy",
-  "Bradon IT",
-  "JustData",
-  "MSP Global",
-  "MSP Channel Insights",
-  "Tech Degenerates"
+const heroImage = {
+  placeholder: "/images/hero-portrait-placeholder.svg",
+  recommended: "Upload a 1200×1500 JPG headshot named tycho-hero.jpg inside public/images"
+};
+
+const trustedCompanies = [
+  { name: "AvePoint", file: "avepoint.svg" },
+  { name: "GTIA", file: "gtia.svg" },
+  { name: "Pax8", file: "pax8.svg" },
+  { name: "Acronis", file: "acronis.svg" },
+  { name: "PeopleRock", file: "peoplerock.svg" },
+  { name: "Portland", file: "portland.svg" },
+  { name: "Cloud Expo", file: "cloud-expo.svg" },
+  { name: "CloudFest", file: "cloudfest.svg" },
+  { name: "Managed Services Summit Benelux", file: "managed-services-summit-benelux.svg" },
+  { name: "ESET", file: "eset.svg" },
+  { name: "Cloud Factory", file: "cloud-factory.svg" },
+  { name: "Huntress", file: "huntress.svg" },
+  { name: "Hackers Love", file: "hackers-love.svg" },
+  { name: "Q-Cyber", file: "q-cyber.svg" },
+  { name: "MKB-IT", file: "mkb-it.svg" },
+  { name: "IT-Synergy", file: "it-synergy.svg" },
+  { name: "Bradon IT", file: "bradon-it.svg" },
+  { name: "JustData", file: "justdata.svg" },
+  { name: "MSP Global", file: "msp-global.svg" },
+  { name: "MSP Channel Insights", file: "msp-channel-insights.svg" },
+  { name: "Tech Degenerates", file: "tech-degenerates.svg" }
 ];
 
 const videoShowcase = [
@@ -120,11 +126,18 @@ export default function HomePage() {
             </div>
           </div>
           <div className="hero-media" role="presentation">
-            <div className="hero-portrait" aria-hidden="true" />
-            <p className="hero-media-note">
-              Add a headshot named <code>tycho-portrait.jpg</code> inside
-              <code>public/images</code> to replace this gradient.
-            </p>
+            <figure className="hero-portrait">
+              <Image
+                src={heroImage.placeholder}
+                alt="Placeholder portrait for Tycho Loke"
+                width={600}
+                height={750}
+                priority
+              />
+              <figcaption className="image-note">
+                {heroImage.recommended}
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
@@ -176,13 +189,24 @@ export default function HomePage() {
             From global vendors to high-growth MSPs, these brands have partnered
             with me for strategy, enablement, and unforgettable event moments.
           </p>
-          <div className="logo-cloud">
-            {logoLabels.map((label) => (
-              <div key={label} className="logo-card" title={label}>
-                {label}
-              </div>
+          <div className="logo-grid">
+            {trustedCompanies.map((company) => (
+              <figure key={company.file} className="logo-tile">
+                <Image
+                  src={`/logos/${company.file}`}
+                  alt={`${company.name} logo`}
+                  width={240}
+                  height={96}
+                  sizes="(max-width: 640px) 160px, 240px"
+                />
+                <figcaption>{company.name}</figcaption>
+              </figure>
             ))}
           </div>
+          <p className="logo-note">
+            For crisp results, save each partner logo as a transparent PNG or SVG sized
+            240×96 inside <code>public/logos</code> using the filenames shown above.
+          </p>
         </div>
       </section>
 
