@@ -31,7 +31,7 @@ export function SiteFooter() {
               <span className="logo-icon">TL</span>
               <span>Tycho Loke</span>
             </div>
-            <p style={{ color: "rgba(226, 232, 240, 0.7)", marginTop: "1rem" }}>
+            <p style={{ color: "rgba(255, 214, 222, 0.72)", marginTop: "1rem" }}>
               Helping MSPs innovate faster, protect smarter, and build remarkable
               customer experiences across Microsoft, security, and automation.
             </p>
@@ -39,10 +39,19 @@ export function SiteFooter() {
 
           {NAV_SECTIONS.map((section) => (
             <div key={section.title}>
-              <h3 className="section-title" style={{ fontSize: "1.1rem" }}>
+              <h3 className="section-title" style={{ fontSize: "1.1rem", marginBottom: "0.75rem" }}>
                 {section.title}
               </h3>
-              <ul style={{ listStyle: "none", padding: 0, margin: 0, color: "rgba(226,232,240,0.7)", display: "grid", gap: "0.6rem" }}>
+              <ul
+                style={{
+                  listStyle: "none",
+                  padding: 0,
+                  margin: 0,
+                  color: "rgba(255, 214, 222, 0.72)",
+                  display: "grid",
+                  gap: "0.6rem"
+                }}
+              >
                 {section.items.map((item) => (
                   <li key={item.href}>
                     {item.external ? (
@@ -62,7 +71,7 @@ export function SiteFooter() {
             <h3 className="section-title" style={{ fontSize: "1.1rem" }}>
               Newsletter
             </h3>
-            <p className="section-lead" style={{ fontSize: "0.95rem" }}>
+            <p className="section-lead" style={{ fontSize: "0.95rem", marginBottom: "1.5rem" }}>
               Subscribe for Above The Stack insights on GTM, security, and the
               future of managed services.
             </p>

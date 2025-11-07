@@ -6,18 +6,11 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
 const navItems = [
-  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/experiences", label: "Experiences" },
-  { href: "/portfolio", label: "Portfolio" },
   { href: "/services", label: "Services" },
-  { href: "/events", label: "Events" },
-  { href: "/contact", label: "Contact" },
-  {
-    href: "https://abovethestack.com",
-    label: "Above The Stack",
-    external: true
-  }
+  { href: "/portfolio", label: "Portfolio" },
+  { href: "/experiences", label: "Experiences" },
+  { href: "/contact", label: "Contact" }
 ];
 
 const primaryCta = { href: "/contact", label: "Book Tycho" };
@@ -29,8 +22,6 @@ export function SiteHeader() {
   const toggle = () => setOpen((prev) => !prev);
   const close = () => setOpen(false);
 
-  const desktopNav = navItems.filter((item) => item.href !== primaryCta.href);
-
   return (
     <header className="navbar">
       <div className="container navbar-container">
@@ -40,29 +31,19 @@ export function SiteHeader() {
         </Link>
 
         <nav className="nav-links" aria-label="Primary navigation">
-          {desktopNav.map((item) => {
-            const isActive = !item.external && pathname === item.href;
+          <ul className="nav-list">
+            {navItems.map((item) => {
+              const isActive = pathname === item.href;
 
-            return item.external ? (
-              <a
-                key={item.href}
-                href={item.href}
-                className="nav-link"
-                target="_blank"
-                rel="noreferrer"
-              >
-                {item.label}
-              </a>
-            ) : (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={clsx("nav-link", isActive && "nav-link--active")}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
+              return (
+                <li key={item.href}>
+                  <Link href={item.href} className={clsx("nav-link", isActive && "nav-link--active")}>
+                    {item.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
         </nav>
 
         <div className="nav-actions">
@@ -114,28 +95,11 @@ export function SiteHeader() {
               </button>
             </div>
             <nav aria-label="Mobile navigation">
-              {navItems.map((item) =>
-                item.external ? (
-                  <a
-                    key={item.href}
-                    href={item.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="mobile-nav-link"
-                  >
-                    {item.label}
-                  </a>
-                ) : (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className="mobile-nav-link"
-                    onClick={close}
-                  >
-                    {item.label}
-                  </Link>
-                )
-              )}
+              {navItems.map((item) => (
+                <Link key={item.href} href={item.href} className="mobile-nav-link" onClick={close}>
+                  {item.label}
+                </Link>
+              ))}
             </nav>
             <Link href={primaryCta.href} className="button mobile-nav-cta" onClick={close}>
               {primaryCta.label}
