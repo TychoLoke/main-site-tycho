@@ -3,6 +3,8 @@ import Link from "next/link";
 const services = [
   {
     title: "Public speaking",
+    price: "from €3,500",
+    duration: "45–60 minute keynote or panel",
     description:
       "Dynamic keynotes and panels covering cybersecurity, Microsoft cloud, GTM growth, and the future of managed services.",
     outcomes: [
@@ -13,6 +15,8 @@ const services = [
   },
   {
     title: "Training & workshops",
+    price: "from €4,800",
+    duration: "Half- or full-day format",
     description:
       "Hands-on enablement programs that elevate technical and commercial capabilities inside MSP teams.",
     outcomes: [
@@ -23,6 +27,8 @@ const services = [
   },
   {
     title: "Consultancy",
+    price: "from €2,200 / month",
+    duration: "90-day sprint minimum",
     description:
       "Strategic advisory on positioning, service design, and operational excellence that keeps MSPs future-ready.",
     outcomes: [
@@ -31,6 +37,46 @@ const services = [
       "Automation roadmaps aligned to customer experience outcomes."
     ]
   }
+];
+
+const packages = [
+  {
+    name: "Momentum Sprint",
+    price: "€6,500",
+    description: "Two-day onsite or virtual workshop focused on Microsoft 365, security baselines, and GTM activation.",
+    includes: [
+      "Pre-engagement discovery and stakeholder interviews",
+      "Service blueprint and action plan delivered within five business days",
+      "30-day accountability check-in"
+    ]
+  },
+  {
+    name: "Launch Partner Program",
+    price: "€9,800",
+    description: "Advisory retainer pairing GTM strategy with enablement assets to launch a new managed service.",
+    includes: [
+      "Positioning workshop and messaging architecture",
+      "Sales enablement toolkit with deck, one-pager, and email sequences",
+      "Weekly stand-ups for eight weeks"
+    ]
+  },
+  {
+    name: "Event Accelerator",
+    price: "€4,200",
+    description: "Keynote plus breakout or VIP roundtable, complete with promotional content and follow-up assets.",
+    includes: [
+      "Custom session narrative and visuals",
+      "Promotional video snippet for social and email",
+      "Post-event recap template and CTA"
+    ]
+  }
+];
+
+const addOns = [
+  "Travel outside the Netherlands billed at cost",
+  "Optional video crew and production partner available on request",
+  "Event marketing bundle with social copy, newsletter blurbs, and graphics",
+  "Executive briefings or leadership roundtables can be added to any engagement"
 ];
 
 const testimonials = [
@@ -67,6 +113,10 @@ export default function ServicesPage() {
           {services.map((service) => (
             <article className="card" key={service.title}>
               <h3>{service.title}</h3>
+              <p className="service-card-price">
+                {service.price}
+                <span>{service.duration}</span>
+              </p>
               <p>{service.description}</p>
               <div className="rich-text">
                 <ul>
@@ -77,6 +127,31 @@ export default function ServicesPage() {
               </div>
             </article>
           ))}
+        </div>
+
+        <div className="divider" />
+
+        <h2 className="section-title">Popular engagement bundles</h2>
+        <div className="grid grid--three">
+          {packages.map((pkg) => (
+            <article className="card" key={pkg.name}>
+              <h3>{pkg.name}</h3>
+              <p className="service-card-price">{pkg.price}</p>
+              <p>{pkg.description}</p>
+              <div className="rich-text">
+                <ul>
+                  {pkg.includes.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="alert" style={{ marginTop: "2.5rem" }}>
+          <strong>Need something bespoke?</strong> Combine services or request a
+          tailored program — most custom engagements start at €1,850.
         </div>
 
         <div className="divider" />
@@ -102,6 +177,14 @@ export default function ServicesPage() {
                 <li>Modern Work Momentum — hybrid training sprint for Microsoft 365 adoption.</li>
                 <li>Security Storytelling Lab — messaging accelerator for technical founders.</li>
                 <li>Automation Catalyst — blueprinting repeatable onboarding flows.</li>
+              </ul>
+            </div>
+            <div className="rich-text" style={{ marginTop: "1.5rem" }}>
+              <h4>Available add-ons</h4>
+              <ul>
+                {addOns.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
               </ul>
             </div>
           </div>
@@ -133,9 +216,14 @@ export default function ServicesPage() {
             Tell me about your event, team, or initiative and we’ll craft a
             session that delivers momentum and measurable value.
           </p>
-          <Link href="/contact" className="button">
-            Start a conversation
-          </Link>
+          <div className="hero-actions" style={{ justifyContent: "center" }}>
+            <Link href="mailto:info@tycholoke.com?subject=Services%20inquiry" className="button" target="_blank">
+              Request proposal
+            </Link>
+            <Link href="/contact" className="button button--ghost">
+              Book a discovery call
+            </Link>
+          </div>
         </div>
       </div>
     </section>

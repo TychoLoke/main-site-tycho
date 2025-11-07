@@ -9,7 +9,11 @@ const experiences = [
       "Translate complex tenant management and compliance frameworks into MSP-ready offerings.",
       "Design onboarding blueprints that accelerate partner time-to-value.",
       "Coach pre-sales teams on storytelling that connects technical depth to outcomes."
-    ]
+    ],
+    logo: {
+      fileName: "avepoint-logo.png",
+      alt: "AvePoint logo"
+    }
   },
   {
     role: "Pre-Sales Consultant",
@@ -21,7 +25,11 @@ const experiences = [
       "Delivered immersive demos showcasing security and automation best practices.",
       "Co-created modern workplace roadmaps with C-level stakeholders.",
       "Enabled sales teams with repeatable proof-of-concept playbooks."
-    ]
+    ],
+    logo: {
+      fileName: "peoplerock-logo.png",
+      alt: "PeopleRock logo"
+    }
   },
   {
     role: "Technical Consultant",
@@ -33,7 +41,11 @@ const experiences = [
       "Implemented Microsoft 365 and Azure architectures tailored to industry compliance.",
       "Led automation initiatives that reduced onboarding effort by up to 40%.",
       "Championed managed security services rooted in Zero Trust principles."
-    ]
+    ],
+    logo: {
+      fileName: "peoplerock-logo.png",
+      alt: "PeopleRock logo"
+    }
   },
   {
     role: "Operations Manager",
@@ -45,7 +57,11 @@ const experiences = [
       "Scaled technical teams and 24/7 support operations globally.",
       "Optimized cost structures through automation and vendor partnerships.",
       "Championed customer success initiatives that drove retention."
-    ]
+    ],
+    logo: {
+      fileName: "skynode-logo.png",
+      alt: "Skynode logo"
+    }
   }
 ];
 
@@ -82,6 +98,20 @@ export default function ExperiencesPage() {
               <span>
                 {experience.period} · {experience.org}
               </span>
+              {experience.logo ? (
+                <div className="experience-logo-slot">
+                  <div
+                    className="experience-logo"
+                    style={{ backgroundImage: `url(/logos/${experience.logo.fileName})` }}
+                    role="img"
+                    aria-label={experience.logo.alt ?? `${experience.org} logo`}
+                  />
+                  <p>
+                    Save a horizontal logo as <code>{experience.logo.fileName}</code> (recommended
+                    320px × 120px) in <code>public/logos</code> to display it here.
+                  </p>
+                </div>
+              ) : null}
               <h3>{experience.role}</h3>
               <p>{experience.summary}</p>
               <div className="rich-text">

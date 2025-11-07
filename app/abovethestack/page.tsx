@@ -43,6 +43,13 @@ export default function AboveTheStackPage() {
           and vendor teams who want the latest insights, frameworks, and
           storytelling tools to stay ahead.
         </p>
+        <p style={{ marginBottom: "2rem" }}>
+          Prefer the website experience? Visit the home at {" "}
+          <a href="https://abovethestack.com" target="_blank" rel="noreferrer">
+            abovethestack.com
+          </a>
+          .
+        </p>
 
         <div className="grid grid--two">
           {pillars.map((pillar) => (

@@ -13,7 +13,11 @@ const navItems = [
   { href: "/services", label: "Services" },
   { href: "/events", label: "Events" },
   { href: "/contact", label: "Contact" },
-  { href: "/abovethestack", label: "AboveTheStack" }
+  {
+    href: "https://abovethestack.com",
+    label: "Above The Stack",
+    external: true
+  }
 ];
 
 export function SiteHeader() {
@@ -32,18 +36,29 @@ export function SiteHeader() {
         </Link>
 
         <nav className="nav-links" aria-label="Primary navigation">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={clsx(
-                "nav-link",
-                pathname === item.href && "nav-link--active"
-              )}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) => {
+            const isActive = !item.external && pathname === item.href;
+
+            return item.external ? (
+              <a
+                key={item.href}
+                href={item.href}
+                className="nav-link"
+                target="_blank"
+                rel="noreferrer"
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={clsx("nav-link", isActive && "nav-link--active")}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
         </nav>
 
         <div className="nav-actions">
@@ -61,11 +76,17 @@ export function SiteHeader() {
 
       {open ? (
         <div id="mobile-nav" className="mobile-nav" role="dialog" aria-modal>
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} onClick={close}>
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map((item) =>
+            item.external ? (
+              <a key={item.href} href={item.href} target="_blank" rel="noreferrer">
+                {item.label}
+              </a>
+            ) : (
+              <Link key={item.href} href={item.href} onClick={close}>
+                {item.label}
+              </Link>
+            )
+          )}
           <button type="button" className="button button--ghost" onClick={close}>
             Close
           </button>

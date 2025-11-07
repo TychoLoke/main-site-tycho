@@ -1,44 +1,80 @@
 import Link from "next/link";
 
 const trainingHighlights = [
-  "Microsoft 365 tenant hardening and security baselines",
-  "Azure landing zone strategy for MSP scale",
-  "Modern Work adoption programs that unlock productivity",
-  "Automation frameworks to streamline onboarding and support"
+  {
+    title: "Become a better MSP",
+    description:
+      "Leadership and operational training that matures your service catalogue, elevates CX, and readies your team for enterprise expectations."
+  },
+  {
+    title: "MSP to Microsoft AI Cloud Partner (MIP)",
+    description:
+      "Roadmaps, compliance checklists, and sales enablement to unlock solution partner designations and co-sell benefits."
+  },
+  {
+    title: "AI + Automation enablement",
+    description:
+      "Build repeatable AI copilots, process automation, and marketing workflows that scale your delivery without adding headcount."
+  },
+  {
+    title: "Go-to-market accelerator",
+    description:
+      "Positioning, packaging, and storytelling labs that help your team sell modern Microsoft, security, and managed services confidently."
+  }
+];
+
+const workshopOutcomes = [
+  "Executive-ready roadmaps aligned to revenue targets",
+  "Playbooks, templates, and slide decks you can co-brand",
+  "Hands-on labs tailored to your tools and stack",
+  "Performance metrics so improvements stay measurable"
 ];
 
 const logoLabels = [
   "AvePoint",
+  "GTIA",
   "Pax8",
-  "CompTIA",
-  "ESET",
-  "CloudFest",
+  "Acronis",
+  "PeopleRock",
+  "Portland",
   "Cloud Expo",
+  "CloudFest",
+  "Managed Services Summit Benelux",
+  "ESET",
+  "Cloud Factory",
+  "Huntress",
+  "Hackers Love",
+  "Q-Cyber",
+  "MKB-IT",
+  "IT-Synergy",
+  "Bradon IT",
+  "JustData",
   "MSP Global",
-  "Acronis"
+  "MSP Channel Insights",
+  "Tech Degenerates"
 ];
 
-const portfolioHighlights = [
+const videoShowcase = [
   {
-    title: "Partners in Security Podcast",
-    description:
-      "Exploring the human aspect of cybersecurity with Ashley Schut from ESET Netherlands.",
-    cta: "Listen now",
-    href: "https://www.youtube.com/watch?v=XGJdht8OVno"
+    title: "ESET · Partners in Security",
+    description: "Human-first cybersecurity storytelling with Ashley Schut.",
+    embedUrl: "https://www.youtube.com/embed/tKrXQhlzTOo",
+    cta: "Watch on YouTube",
+    href: "https://youtu.be/tKrXQhlzTOo?list=TLGGs3T-M0BINnowNzExMjAyNQ"
   },
   {
-    title: "Pax8 Beyond Case Study",
-    description:
-      "Showcasing PeopleRock’s Go-to-market excellence alongside the Pax8 marketplace.",
-    cta: "View case study",
-    href: "https://www.pax8.com/en-uk/blog/beyond-emea-people-rock-case-study/"
+    title: "Pax8 StoreFronts",
+    description: "Walkthrough of marketplace storefront strategies for MSP success.",
+    embedUrl: "https://player.vimeo.com/video/1016152554?h=2b87157fc0",
+    cta: "View on Vimeo",
+    href: "https://vimeo.com/1016152554/2b87157fc0?fl=pl&fe=vl"
   },
   {
-    title: "Cloud Expo Netherlands",
-    description:
-      "Main-stage talk on data classification, access control, and AI for MSPs.",
-    cta: "See recap",
-    href: "https://www.cloudexpoeurope.nl/"
+    title: "AvePoint Baseline Management",
+    description: "Practical demo on Microsoft 365 baselines and automation for partners.",
+    embedUrl: "https://www.youtube.com/embed/8DJX_4rvjJQ",
+    cta: "Watch webinar",
+    href: "https://www.youtube.com/watch?v=8DJX_4rvjJQ"
   }
 ];
 
@@ -61,24 +97,34 @@ export default function HomePage() {
   return (
     <>
       <section className="hero">
-        <div className="container hero-content">
-          <div>
+        <div className="container hero-grid">
+          <div className="hero-copy">
             <span className="badge">Innovate · Strategize · Transform</span>
-            <h1 className="hero-title">Helping MSPs lead with clarity and confidence.</h1>
+            <h1 className="hero-title">
+              Expert-led enablement for MSPs ready to grow, secure, and scale.
+            </h1>
             <p className="hero-subtitle">
-              I partner with managed service providers, vendors, and IT leaders to
-              streamline cloud strategy, enhance security posture, and execute
-              modern Go-to-market programs. Book me for keynotes, advisory, and
-              hands-on enablement that moves your business forward.
+              I’m Tycho Loke — channel strategist, Microsoft advisor, and speaker
+              empowering managed service providers to evolve into modern solution
+              partners. From AI-infused service delivery to GTM storytelling and
+              security baselines, I help you build confidence across the entire
+              customer journey.
             </p>
             <div className="hero-actions">
               <Link href="/contact" className="button">
-                Work with me
+                Book Tycho
               </Link>
-              <Link href="/services" className="button button--ghost">
-                Explore services
+              <Link href="/portfolio" className="button button--ghost">
+                See recent work
               </Link>
             </div>
+          </div>
+          <div className="hero-media" role="presentation">
+            <div className="hero-portrait" aria-hidden="true" />
+            <p className="hero-media-note">
+              Add a headshot named <code>tycho-portrait.jpg</code> inside
+              <code>public/images</code> to replace this gradient.
+            </p>
           </div>
         </div>
       </section>
@@ -86,18 +132,36 @@ export default function HomePage() {
       <section className="section section--alt">
         <div className="container">
           <h2 className="section-title">Expert-led training & workshops</h2>
-          <p className="section-lead">
-            Boost your team’s expertise with deep-dive sessions on Microsoft 365,
-            Azure, modern work, AI, and cybersecurity. Every engagement is tailored
-            to your maturity stage and desired outcomes.
-          </p>
-          <div className="grid grid--two">
-            {trainingHighlights.map((item) => (
-              <div className="card" key={item}>
-                <h3>{item.split(" ")[0]} spotlight</h3>
-                <p>{item}</p>
-              </div>
-            ))}
+          <div className="workshop-layout">
+            <div>
+              <p className="section-lead">
+                Build the muscle memory to become a better MSP, transition to a
+                Microsoft AI Cloud Partner, and operationalize AI across your
+                services. Every engagement blends strategy, storytelling, and
+                hands-on labs tailored to your stack.
+              </p>
+              <ul className="checklist">
+                {workshopOutcomes.map((outcome) => (
+                  <li key={outcome}>{outcome}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="grid grid--two">
+              {trainingHighlights.map((item) => (
+                <div className="card" key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="hero-actions" style={{ marginTop: "2.5rem" }}>
+            <Link href="/services" className="button">
+              View training menu
+            </Link>
+            <Link href="/contact" className="button button--ghost">
+              Plan your workshop
+            </Link>
           </div>
         </div>
       </section>
@@ -108,9 +172,13 @@ export default function HomePage() {
           <h2 className="section-title" style={{ marginTop: "1rem" }}>
             Companies that trusted my service
           </h2>
+          <p className="section-lead" style={{ maxWidth: "720px" }}>
+            From global vendors to high-growth MSPs, these brands have partnered
+            with me for strategy, enablement, and unforgettable event moments.
+          </p>
           <div className="logo-cloud">
             {logoLabels.map((label) => (
-              <div key={label} className="logo-card">
+              <div key={label} className="logo-card" title={label}>
                 {label}
               </div>
             ))}
@@ -150,17 +218,31 @@ export default function HomePage() {
         <div className="container">
           <div className="badge">Case studies & spotlights</div>
           <h2 className="section-title">Take a look at my work</h2>
-          <div className="grid grid--three">
-            {portfolioHighlights.map((item) => (
-              <div className="card" key={item.title}>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
-                <div style={{ marginTop: "1.5rem" }}>
+          <p className="section-lead">
+            Dive into a sample of keynotes, webinars, and marketplace enablement
+            projects. Each story highlights the blend of strategy, storytelling,
+            and technical depth your audience can expect.
+          </p>
+          <div className="video-grid">
+            {videoShowcase.map((item) => (
+              <article className="video-card" key={item.title}>
+                <div className="video-frame">
+                  <iframe
+                    src={item.embedUrl}
+                    title={item.title}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="video-card-body">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
                   <Link href={item.href} className="button" target="_blank" rel="noreferrer">
                     {item.cta}
                   </Link>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
           <div style={{ marginTop: "2.5rem", textAlign: "center" }}>

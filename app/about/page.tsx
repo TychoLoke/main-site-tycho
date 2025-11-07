@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const stats = [
-  { label: "Years in the channel", value: "10+" },
+  { label: "Years in the channel", value: "5+" },
   { label: "Global stages", value: "25" },
   { label: "MSP teams enabled", value: "120+" },
   { label: "Countries collaborated", value: "8" }
@@ -15,6 +15,14 @@ export default function AboutPage() {
         <h1 className="section-title" style={{ marginTop: "1rem" }}>
           A passion for IT, innovation, and helping MSPs grow
         </h1>
+        <div className="about-hero">
+          <div className="about-portrait" aria-hidden="true" />
+          <p className="about-portrait-note">
+            Upload your photo as <code>tycho-about.jpg</code> in <code>public/images</code>
+            to replace this placeholder.
+          </p>
+        </div>
+
         <div className="stat-grid" style={{ margin: "2.5rem 0" }}>
           {stats.map((stat) => (
             <div className="stat-card" key={stat.label}>
@@ -28,10 +36,10 @@ export default function AboutPage() {
         <div className="grid" style={{ gap: "3rem" }}>
           <div className="rich-text" style={{ fontSize: "1.05rem", color: "rgba(226,232,240,0.8)" }}>
             <p>
-              Technology has always been at the core of my journey. From
-              unraveling complex IT challenges to building high-performing
-              go-to-market motions, my mission is to help MSPs and IT providers
-              create sustainable, profitable impact.
+              Technology has always been at the core of my journey. Over the past
+              five years in the channel I’ve gone from hands-on engineer to
+              trusted advisor for MSPs, ISVs, and vendor communities looking to
+              build resilient, profitable practices.
             </p>
             <p>
               Today, I serve as Channel Pre-Sales Solutions Engineer at AvePoint
