@@ -36,6 +36,21 @@ const heroImage = {
   alt: "Tycho Loke smiling while speaking on stage"
 };
 
+const heroHighlights = [
+  {
+    value: "120+",
+    label: "MSP leaders mentored each year"
+  },
+  {
+    value: "15",
+    label: "Countries hosted workshops in"
+  },
+  {
+    value: "4.9/5",
+    label: "Average post-session rating"
+  }
+];
+
 const trustedCompanies = [
   { name: "AvePoint", file: "avepoint.svg" },
   { name: "GTIA", file: "gtia.svg" },
@@ -118,7 +133,10 @@ export default function HomePage() {
       <section className="hero">
         <div className="container hero-grid">
           <div className="hero-copy">
-            <span className="badge">Innovate · Strategize · Transform</span>
+            <div className="hero-eyebrow">
+              <span className="badge badge--pulse">Innovate · Strategize · Transform</span>
+              <span className="hero-meta">Microsoft AI Cloud Partner advisor</span>
+            </div>
             <h1 className="hero-title">
               Expert-led enablement for MSPs ready to grow, secure, and scale.
             </h1>
@@ -129,6 +147,14 @@ export default function HomePage() {
               security baselines, I help you build confidence across the entire
               customer journey.
             </p>
+            <ul className="hero-highlights" role="list">
+              {heroHighlights.map((item) => (
+                <li key={item.label}>
+                  <strong>{item.value}</strong>
+                  <span>{item.label}</span>
+                </li>
+              ))}
+            </ul>
             <div className="hero-actions">
               <Link href="/contact" className="button">
                 Book Tycho
@@ -148,6 +174,13 @@ export default function HomePage() {
                 priority
               />
             </figure>
+            <div className="hero-stat-card">
+              <h3>On-stage impact</h3>
+              <p>
+                Keynotes and enablement sprints designed for MSP, ISV, and
+                cybersecurity audiences worldwide.
+              </p>
+            </div>
           </div>
         </div>
       </section>
