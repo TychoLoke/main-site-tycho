@@ -32,32 +32,26 @@ const workshopOutcomes = [
 ];
 
 const heroImage = {
-  placeholder: "/images/hero-portrait-placeholder.svg",
-  recommended: "Upload a 1200×1500 JPG headshot named tycho-hero.jpg inside public/images"
+  src: "/images/tycho-hero.jpg",
+  alt: "Tycho Loke smiling while speaking on stage"
 };
 
 const trustedCompanies = [
   { name: "AvePoint", file: "avepoint.svg" },
   { name: "GTIA", file: "gtia.svg" },
   { name: "Pax8", file: "pax8.svg" },
-  { name: "Acronis", file: "acronis.svg" },
   { name: "PeopleRock", file: "peoplerock.svg" },
   { name: "Portland", file: "portland.svg" },
-  { name: "Cloud Expo", file: "cloud-expo.svg" },
+  { name: "Cloud Expo", file: "CloudExpo.svg" },
   { name: "CloudFest", file: "cloudfest.svg" },
-  { name: "Managed Services Summit Benelux", file: "managed-services-summit-benelux.svg" },
+  { name: "Managed Services Summit Benelux", file: "ManagedServiceSummitBenelux.svg" },
   { name: "ESET", file: "eset.svg" },
-  { name: "Cloud Factory", file: "cloud-factory.svg" },
-  { name: "Huntress", file: "huntress.svg" },
-  { name: "Hackers Love", file: "hackers-love.svg" },
-  { name: "Q-Cyber", file: "q-cyber.svg" },
-  { name: "MKB-IT", file: "mkb-it.svg" },
-  { name: "IT-Synergy", file: "it-synergy.svg" },
-  { name: "Bradon IT", file: "bradon-it.svg" },
-  { name: "JustData", file: "justdata.svg" },
-  { name: "MSP Global", file: "msp-global.svg" },
-  { name: "MSP Channel Insights", file: "msp-channel-insights.svg" },
-  { name: "Tech Degenerates", file: "tech-degenerates.svg" }
+  { name: "Hackers Love", file: "HackersLove.svg" },
+  { name: "QCyber", file: "qcyber.svg" },
+  { name: "MKB-IT", file: "mkbit.svg" },
+  { name: "MSP Global", file: "mspglobal.svg" },
+  { name: "MSP Channel Insights", file: "mspchannelinsights.svg" },
+  { name: "The Tech Degenerates", file: "thetechdegenerates.svg" }
 ];
 
 const videoShowcase = [
@@ -128,15 +122,12 @@ export default function HomePage() {
           <div className="hero-media" role="presentation">
             <figure className="hero-portrait">
               <Image
-                src={heroImage.placeholder}
-                alt="Placeholder portrait for Tycho Loke"
-                width={600}
-                height={750}
+                src={heroImage.src}
+                alt={heroImage.alt}
+                width={900}
+                height={1125}
                 priority
               />
-              <figcaption className="image-note">
-                {heroImage.recommended}
-              </figcaption>
             </figure>
           </div>
         </div>

@@ -12,36 +12,39 @@ export default function AboutPage() {
   return (
     <section className="section">
       <div className="container">
-        <span className="badge">About Tycho</span>
-        <h1 className="section-title" style={{ marginTop: "1rem" }}>
-          A passion for IT, innovation, and helping MSPs grow
-        </h1>
         <div className="about-hero">
+          <div className="about-hero-copy">
+            <span className="badge">About Tycho</span>
+            <h1 className="section-title">
+              A passion for IT, innovation, and helping MSPs grow
+            </h1>
+            <p className="about-lead">
+              Channel strategist, solutions engineer, and speaker helping MSPs build resilient Microsoft practices with clarity,
+              creativity, and heart.
+            </p>
+            <div className="stat-grid about-stats">
+              {stats.map((stat) => (
+                <div className="stat-card" key={stat.label}>
+                  <strong>{stat.value}</strong>
+                  <span className="stat-label">{stat.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
           <figure className="about-portrait">
             <Image
-              src="/images/tycho-about-placeholder.svg"
-              alt="Placeholder portrait for Tycho Loke"
-              width={600}
-              height={750}
+              src="/images/tycho-hero.jpg"
+              alt="Tycho Loke in front of a keynote backdrop"
+              width={900}
+              height={1125}
+              sizes="(max-width: 768px) 320px, 420px"
+              priority
             />
-            <figcaption className="image-note">
-              Upload a 1200×1500 JPG named <code>tycho-about.jpg</code> inside <code>public/images</code> to replace this image.
-            </figcaption>
           </figure>
         </div>
 
-        <div className="stat-grid" style={{ margin: "2.5rem 0" }}>
-          {stats.map((stat) => (
-            <div className="stat-card" key={stat.label}>
-              <strong>{stat.value}</strong>
-              <span style={{ color: "rgba(226,232,240,0.7)", fontWeight: 500 }}>
-                {stat.label}
-              </span>
-            </div>
-          ))}
-        </div>
-        <div className="grid" style={{ gap: "3rem" }}>
-          <div className="rich-text" style={{ fontSize: "1.05rem", color: "rgba(226,232,240,0.8)" }}>
+        <div className="about-content">
+          <div className="rich-text about-rich-text">
             <p>
               Technology has always been at the core of my journey. Over the past
               five years in the channel I’ve gone from hands-on engineer to
@@ -66,13 +69,13 @@ export default function AboutPage() {
               focus, and curiosity.
             </p>
           </div>
-          <div className="card" style={{ alignSelf: "start" }}>
-            <h2 style={{ marginTop: 0 }}>Let’s connect & elevate IT together</h2>
-            <p style={{ color: "var(--muted)" }}>
+          <div className="card about-card">
+            <h2>Let’s connect & elevate IT together</h2>
+            <p>
               Want to explore how I can help your MSP or IT business thrive?
               Let’s talk and tailor a program built around your goals.
             </p>
-            <div className="hero-actions" style={{ marginTop: "1.5rem" }}>
+            <div className="hero-actions about-card-actions">
               <Link href="https://www.linkedin.com/in/tycholoke/" className="button" target="_blank">
                 Visit LinkedIn
               </Link>
