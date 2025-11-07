@@ -20,12 +20,16 @@ const navItems = [
   }
 ];
 
+const primaryCta = { href: "/contact", label: "Book Tycho" };
+
 export function SiteHeader() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   const toggle = () => setOpen((prev) => !prev);
   const close = () => setOpen(false);
+
+  const desktopNav = navItems.filter((item) => item.href !== primaryCta.href);
 
   return (
     <header className="navbar">
@@ -36,7 +40,7 @@ export function SiteHeader() {
         </Link>
 
         <nav className="nav-links" aria-label="Primary navigation">
-          {navItems.map((item) => {
+          {desktopNav.map((item) => {
             const isActive = !item.external && pathname === item.href;
 
             return item.external ? (
@@ -62,34 +66,81 @@ export function SiteHeader() {
         </nav>
 
         <div className="nav-actions">
+          <Link href={primaryCta.href} className="button button--outline button--small">
+            {primaryCta.label}
+          </Link>
           <button
             type="button"
-            className="button button--ghost"
+            className="nav-toggle"
             onClick={toggle}
             aria-expanded={open}
             aria-controls="mobile-nav"
+            aria-label={open ? "Close navigation" : "Open navigation"}
           >
-            Menu
+            <span aria-hidden>
+              <svg
+                width="22"
+                height="16"
+                viewBox="0 0 22 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M1 1h20M1 8h20M1 15h20" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+              </svg>
+            </span>
+            <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
           </button>
         </div>
       </div>
 
       {open ? (
         <div id="mobile-nav" className="mobile-nav" role="dialog" aria-modal>
-          {navItems.map((item) =>
-            item.external ? (
-              <a key={item.href} href={item.href} target="_blank" rel="noreferrer">
-                {item.label}
-              </a>
-            ) : (
-              <Link key={item.href} href={item.href} onClick={close}>
-                {item.label}
-              </Link>
-            )
-          )}
-          <button type="button" className="button button--ghost" onClick={close}>
-            Close
-          </button>
+          <div className="mobile-nav-inner">
+            <div className="mobile-nav-header">
+              <span className="mobile-nav-title">Menu</span>
+              <button type="button" className="nav-toggle nav-toggle--close" onClick={close}>
+                <span aria-hidden>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 18 18"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M2 2l14 14M16 2 2 16" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
+                  </svg>
+                </span>
+                <span className="sr-only">Close navigation</span>
+              </button>
+            </div>
+            <nav aria-label="Mobile navigation">
+              {navItems.map((item) =>
+                item.external ? (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mobile-nav-link"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="mobile-nav-link"
+                    onClick={close}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              )}
+            </nav>
+            <Link href={primaryCta.href} className="button mobile-nav-cta" onClick={close}>
+              {primaryCta.label}
+            </Link>
+          </div>
         </div>
       ) : null}
     </header>
