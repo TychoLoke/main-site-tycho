@@ -1,57 +1,68 @@
 const events = [
   {
-    name: "CloudFest",
-    dates: "17 - 20 March 2025",
-    location: "Europa Park, Germany",
+    name: "Interstellar Fusion Forward",
+    dates: "12 November 2024",
+    location: "Virtual Broadcast",
     description:
-      "The #1 internet infrastructure event, gathering the global cloud ecosystem for innovation, partnership, and celebration.",
-    attending: "Attending all days",
+      "A futurist look at AI, automation, and space-inspired resilience for MSPs planning their next wave of services.",
+    attending: "Delivering keynote",
     status: "Upcoming",
-    registration: "https://cloudfest.com/",
-    ctaLabel: "Get tickets"
+    registration: "/contact",
+    ctaLabel: "Request invite"
   },
   {
-    name: "CompTIA Community Meetings",
-    dates: "Q2 2025 (TBA)",
-    location: "Benelux Region",
+    name: "DIWUG User Group at AvePoint",
+    dates: "27 November 2024",
+    location: "AvePoint Office, The Hague",
     description:
-      "Facilitating cybersecurity and MSP growth conversations as part of the Benelux executive council.",
-    attending: "Hosting breakout",
+      "Community deep dive into Microsoft 365 governance and Copilot adoption with the Dutch Information Worker User Group.",
+    attending: "Co-hosting & speaking",
+    status: "Upcoming",
+    registration: "https://diwug.nl/",
+    ctaLabel: "Join DIWUG"
+  },
+  {
+    name: "Cloud Expo",
+    dates: "3 – 4 December 2024",
+    location: "Expo Houten, Netherlands",
+    description:
+      "Two days of channel strategy, security, and automation sessions tailored for MSP executives and vendors.",
+    attending: "Speaking & moderating",
+    status: "Upcoming",
+    registration: "https://www.cloudexpoeurope.nl/",
+    ctaLabel: "Event details"
+  },
+  {
+    name: "GTIA Benelux Community Meeting",
+    dates: "5 February 2025",
+    location: "Ghent, Belgium",
+    description:
+      "Bringing together Benelux partners to exchange playbooks on channel collaboration, cyber resilience, and AI adoption.",
+    attending: "Facilitating roundtable",
     status: "Save the date",
-    registration: "https://connect.comptia.org/communities/benelux",
-    ctaLabel: "Join the community"
-  },
-  {
-    name: "Above The Stack Live Webinar",
-    dates: "Monthly",
-    location: "Virtual",
-    description:
-      "Exclusive briefing for MSP leaders covering GTM plays, Microsoft roadmap updates, and security intelligence.",
-    attending: "Hosting",
-    status: "Registration open",
-    registration: "https://tycholoke.com/abovethestack",
-    ctaLabel: "Reserve your seat"
+    registration: "/contact",
+    ctaLabel: "Partner with Tycho"
   }
 ];
 
 const pastHighlights = [
   {
-    title: "Managed Services Summit Benelux 2024",
-    takeaway: "Hosted a panel on sustainable MSP growth and launched the Security Storytelling Lab preview.",
-    link: "https://managedservicessummit.com/benelux",
-    label: "Summit recap"
+    title: "MSP Global 2025 · Barcelona",
+    takeaway: "Shared growth frameworks for scaling Microsoft-led services across Europe’s leading MSP mainstage.",
+    link: "https://mspglobal.com/",
+    label: "Conference site"
   },
   {
-    title: "Cloud Expo Netherlands Main Stage",
-    takeaway: "Delivered the Power Trio talk — data classification, access control, and AI for modern MSPs.",
-    link: "https://www.cloudexpoeurope.nl/",
-    label: "Event site"
+    title: "Pax8 Beyond EMEA 2025",
+    takeaway: "Led enablement labs on storefront excellence, co-sell alignment, and automation for MSP partners.",
+    link: "https://www.pax8.com/",
+    label: "Pax8 overview"
   },
   {
-    title: "Pax8 Beyond EMEA",
-    takeaway: "Led partner enablement sessions on storefront best practices and automation",
-    link: "https://www.pax8.com/en-uk/blog/beyond-emea-people-rock-case-study/",
-    label: "Case study"
+    title: "AvePoint OnPoint 2025 · Scheveningen",
+    takeaway: "Unpacked Copilot governance, data residency, and partner playbooks for AvePoint’s community summit.",
+    link: "https://www.avepoint.com/",
+    label: "AvePoint website"
   }
 ];
 
