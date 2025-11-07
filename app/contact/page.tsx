@@ -79,7 +79,7 @@ export default function ContactPage() {
           <div className="card" style={{ padding: "2.5rem" }}>
             <h2 style={{ marginTop: 0 }}>Let’s build something remarkable</h2>
             <p style={{ color: "var(--muted)", marginBottom: "2rem" }}>
-              Tell me about your project or event and I'll respond within two
+              Tell me about your project or event and I&apos;ll respond within two
               business days.
             </p>
             <form
