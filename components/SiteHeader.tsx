@@ -61,6 +61,12 @@ export function SiteHeader() {
           })}
         </nav>
 
+        <div className="navbar-cta">
+          <Link href="/contact" className="button button--pill">
+            Work with Tycho
+          </Link>
+        </div>
+
         <div className="nav-actions">
           <button
             type="button"
@@ -87,6 +93,9 @@ export function SiteHeader() {
               </Link>
             )
           )}
+          <Link href="/contact" className="button" onClick={close}>
+            Work with Tycho
+          </Link>
           <button type="button" className="button button--ghost" onClick={close}>
             Close
           </button>
