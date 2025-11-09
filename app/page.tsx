@@ -36,21 +36,6 @@ const heroImage = {
   alt: "Tycho Loke smiling while speaking on stage"
 };
 
-const heroHighlights = [
-  {
-    value: "120+",
-    label: "MSP leaders mentored each year"
-  },
-  {
-    value: "15",
-    label: "Countries hosted workshops in"
-  },
-  {
-    value: "4.9/5",
-    label: "Average post-session rating"
-  }
-];
-
 const trustedCompanies = [
   { name: "AvePoint", file: "avepoint.svg" },
   { name: "GTIA", file: "gtia.svg" },
@@ -138,23 +123,13 @@ export default function HomePage() {
               <span className="hero-meta">Microsoft AI Cloud Partner advisor</span>
             </div>
             <h1 className="hero-title">
-              Expert-led enablement for MSPs ready to grow, secure, and scale.
+              Strategic enablement for modern MSPs.
             </h1>
             <p className="hero-subtitle">
-              I’m Tycho Loke — channel strategist, Microsoft advisor, and speaker
-              empowering managed service providers to evolve into modern solution
-              partners. From AI-infused service delivery to GTM storytelling and
-              security baselines, I help you build confidence across the entire
-              customer journey.
+              I’m Tycho Loke — channel strategist, Microsoft advisor, and speaker.
+              I help managed service providers modernize their services, tighten
+              security, and tell a clearer story without the noise.
             </p>
-            <ul className="hero-highlights" role="list">
-              {heroHighlights.map((item) => (
-                <li key={item.label}>
-                  <strong>{item.value}</strong>
-                  <span>{item.label}</span>
-                </li>
-              ))}
-            </ul>
             <div className="hero-actions">
               <Link href="/contact" className="button">
                 Book Tycho
@@ -174,13 +149,6 @@ export default function HomePage() {
                 priority
               />
             </figure>
-            <div className="hero-stat-card">
-              <h3>On-stage impact</h3>
-              <p>
-                Keynotes and enablement sprints designed for MSP, ISV, and
-                cybersecurity audiences worldwide.
-              </p>
-            </div>
           </div>
         </div>
       </section>
