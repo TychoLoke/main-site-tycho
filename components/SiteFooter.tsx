@@ -24,34 +24,22 @@ const NAV_SECTIONS = [
 export function SiteFooter() {
   return (
     <footer className="footer">
-      <div className="container">
+      <div className="container footer-container">
         <div className="footer-grid">
-          <div>
-            <div className="logo-mark" aria-label="Tycho Loke">
-              <span className="logo-icon">TL</span>
-              <span>Tycho Loke</span>
-            </div>
-            <p style={{ color: "rgba(255, 214, 222, 0.72)", marginTop: "1rem" }}>
-              Helping MSPs innovate faster, protect smarter, and build remarkable
-              customer experiences across Microsoft, security, and automation.
+          <div className="footer-brand">
+            <Link href="/" className="logo-mark">
+              Tycho Loke
+            </Link>
+            <p>
+              Helping MSPs innovate faster, protect smarter, and build remarkable customer experiences across Microsoft,
+              security, and automation.
             </p>
           </div>
 
           {NAV_SECTIONS.map((section) => (
-            <div key={section.title}>
-              <h3 className="section-title" style={{ fontSize: "1.1rem", marginBottom: "0.75rem" }}>
-                {section.title}
-              </h3>
-              <ul
-                style={{
-                  listStyle: "none",
-                  padding: 0,
-                  margin: 0,
-                  color: "rgba(255, 214, 222, 0.72)",
-                  display: "grid",
-                  gap: "0.6rem"
-                }}
-              >
+            <div key={section.title} className="footer-nav-group">
+              <h3>{section.title}</h3>
+              <ul>
                 {section.items.map((item) => (
                   <li key={item.href}>
                     {item.external ? (
@@ -67,27 +55,15 @@ export function SiteFooter() {
             </div>
           ))}
 
-          <div>
-            <h3 className="section-title" style={{ fontSize: "1.1rem" }}>
-              Newsletter
-            </h3>
-            <p className="section-lead" style={{ fontSize: "0.95rem", marginBottom: "1.5rem" }}>
-              Subscribe for Above The Stack insights on GTM, security, and the
-              future of managed services.
-            </p>
+          <div className="footer-newsletter">
+            <h3>Newsletter</h3>
+            <p>Subscribe for Above The Stack insights on GTM, security, and the future of managed services.</p>
             <form className="newsletter" action="https://formspree.io/f/mwkgygaw" method="post">
               <label className="sr-only" htmlFor="footer-email">
                 Email address
               </label>
-              <input
-                id="footer-email"
-                name="email"
-                type="email"
-                placeholder="you@company.com"
-                required
-                autoComplete="email"
-              />
-              <button type="submit" className="button">
+              <input id="footer-email" name="email" type="email" placeholder="you@company.com" required autoComplete="email" />
+              <button type="submit" className="button button--small">
                 Subscribe
               </button>
             </form>
@@ -96,7 +72,7 @@ export function SiteFooter() {
 
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Tycho Loke. All rights reserved.</span>
-          <div style={{ display: "flex", gap: "1rem" }}>
+          <div className="footer-bottom-links">
             <Link href="mailto:info@tycholoke.com">info@tycholoke.com</Link>
             <Link href="/contact">Contact</Link>
             <a href="https://abovethestack.com" target="_blank" rel="noreferrer">
