@@ -238,7 +238,6 @@ export default function HomePage() {
                   sizes="(max-width: 640px) 220px, 320px"
                   className="logo-tile__image"
                 />
-                <figcaption>{company.name}</figcaption>
               </figure>
             ))}
           </div>
