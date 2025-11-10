@@ -96,7 +96,7 @@ const testimonials = [
 
 export default function ServicesPage() {
   return (
-    <section className="section section--alt">
+    <section className="section section--alt section--beam">
       <div className="container">
         <span className="badge">Services</span>
         <h1 className="section-title" style={{ marginTop: "1rem" }}>
@@ -208,7 +208,7 @@ export default function ServicesPage() {
 
         <div className="divider" />
 
-        <div className="card" style={{ textAlign: "center", padding: "2.5rem" }}>
+        <div className="card card--spotlight" style={{ textAlign: "center", padding: "2.5rem" }}>
           <h2 className="section-title" style={{ marginBottom: "1rem" }}>
             Ready to design your next experience?
           </h2>

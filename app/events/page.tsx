@@ -83,7 +83,7 @@ const formats = [
 
 export default function EventsPage() {
   return (
-    <section className="section">
+    <section className="section section--halo">
       <div className="container">
         <span className="badge">Events</span>
         <h1 className="section-title" style={{ marginTop: "1rem" }}>
@@ -103,10 +103,10 @@ export default function EventsPage() {
               <strong>{event.name}</strong>
               <p>{event.description}</p>
               <p style={{ color: "var(--muted)" }}>
-                <strong style={{ color: "var(--accent)" }}>Location:</strong> {event.location}
+                <span className="text-accent" style={{ fontWeight: 600 }}>Location:</span> {event.location}
               </p>
               <p style={{ color: "var(--muted)" }}>
-                <strong style={{ color: "var(--accent)" }}>Tycho:</strong> {event.attending}
+                <span className="text-accent" style={{ fontWeight: 600 }}>Tycho:</span> {event.attending}
               </p>
               <a className="button" href={event.registration} target="_blank" rel="noreferrer">
                 {event.ctaLabel ?? "Registration & info"}
@@ -147,7 +147,7 @@ export default function EventsPage() {
           Looking for promotional assets? Ask for the event media kit with headshots, bios, and AV requirements.
         </div>
 
-        <div className="card">
+        <div className="card card--spotlight">
           <h2 className="section-title" style={{ marginBottom: "1rem" }}>
             Know an event I should attend?
           </h2>

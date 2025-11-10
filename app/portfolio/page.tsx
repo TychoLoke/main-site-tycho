@@ -93,7 +93,7 @@ const portfolioHighlights = [
 
 export default function PortfolioPage() {
   return (
-    <section className="section">
+    <section className="section section--halo">
       <div className="container">
         <span className="badge">Portfolio</span>
         <h1 className="section-title" style={{ marginTop: "1rem" }}>
@@ -156,7 +156,7 @@ export default function PortfolioPage() {
           </section>
         </div>
 
-        <div className="card" style={{ marginTop: "3rem", padding: "2.5rem" }}>
+        <div className="card card--spotlight" style={{ marginTop: "3rem", padding: "2.5rem" }}>
           <h2 style={{ marginTop: 0 }}>Need proof points for your audience?</h2>
           <p style={{ color: "var(--muted)", marginBottom: "2rem" }}>
             I can share tailored clips, session abstracts, and outcome metrics to

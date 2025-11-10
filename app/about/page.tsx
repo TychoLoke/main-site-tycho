@@ -10,7 +10,7 @@ const stats = [
 
 export default function AboutPage() {
   return (
-    <section className="section">
+    <section className="section section--halo">
       <div className="container">
         <div className="about-hero">
           <div className="about-hero-copy">
@@ -73,7 +73,7 @@ export default function AboutPage() {
               focus, and curiosity.
             </p>
           </div>
-          <div className="card about-card">
+          <div className="card card--spotlight about-card">
             <h2>Let’s connect & elevate IT together</h2>
             <p>
               Want to explore how I can help your MSP or IT business thrive?

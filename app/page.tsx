@@ -120,15 +120,17 @@ export default function HomePage() {
           <div className="hero-copy">
             <div className="hero-eyebrow">
               <span className="badge badge--pulse">Innovate · Strategize · Transform</span>
-              <span className="hero-meta">Microsoft AI Cloud Partner advisor</span>
+              <span className="hero-meta">
+                <span className="text-accent">Microsoft AI Cloud Partner</span> advisor
+              </span>
             </div>
             <h1 className="hero-title">
               Strategic enablement for modern MSPs.
             </h1>
             <p className="hero-subtitle">
-              I’m Tycho Loke — channel strategist, Microsoft advisor, and speaker.
-              I help managed service providers modernize their services, tighten
-              security, and tell a clearer story without the noise.
+              I’m <span className="text-accent">Tycho Loke</span> — channel strategist, Microsoft advisor, and
+              speaker. I help managed service providers modernize their services,
+              tighten security, and tell a clearer story without the noise.
             </p>
             <div className="hero-actions">
               <Link href="/contact" className="button">
@@ -153,7 +155,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section--halo">
         <div className="container">
           <h2 className="section-title">Community leadership</h2>
           <p className="section-lead">
@@ -178,7 +180,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section--alt">
+      <section className="section section--alt section--beam">
         <div className="container">
           <h2 className="section-title">Expert-led training & workshops</h2>
           <div className="workshop-layout">
@@ -215,7 +217,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section--halo">
         <div className="container">
           <div className="badge">Trusted by leading teams</div>
           <h2 className="section-title" style={{ marginTop: "1rem" }}>
@@ -247,7 +249,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section--alt">
+      <section className="section section--alt section--beam">
         <div className="container">
           <h2 className="section-title">Strategic speaking engagements</h2>
           <p className="section-lead">
@@ -275,7 +277,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section--halo">
         <div className="container">
           <div className="badge">Case studies & spotlights</div>
           <h2 className="section-title">Take a look at my work</h2>
@@ -314,7 +316,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section--alt">
+      <section className="section section--alt section--beam">
         <div className="container">
           <h2 className="section-title">What partners say</h2>
           <div className="grid grid--two">
@@ -332,9 +334,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section--halo">
         <div className="container">
-          <div className="card" style={{ textAlign: "center", padding: "3rem" }}>
+          <div className="card card--spotlight" style={{ textAlign: "center", padding: "3rem" }}>
             <h2 className="section-title" style={{ marginBottom: "1rem" }}>
               Ready to elevate your MSP brand and delivery?
             </h2>

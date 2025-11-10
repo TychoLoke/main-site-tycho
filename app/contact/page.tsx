@@ -34,7 +34,7 @@ const serviceFocus = [
 
 export default function ContactPage() {
   return (
-    <section className="section section--alt">
+    <section className="section section--alt section--beam">
       <div className="container">
         <span className="badge">Contact</span>
         <h1 className="section-title" style={{ marginTop: "1rem" }}>
@@ -87,7 +87,7 @@ export default function ContactPage() {
               ))}
             </ul>
           </div>
-          <div className="card contact-form-card">
+          <div className="card card--spotlight contact-form-card">
             <h2 style={{ marginTop: 0 }}>Let’s design an outstanding experience</h2>
             <p style={{ color: "var(--muted)", margin: "0", maxWidth: "52ch" }}>
               Fill out the form and I’ll return with a tailored proposal, dates,

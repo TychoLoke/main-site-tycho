@@ -107,7 +107,7 @@ const communityPlatforms = [
 
 export default function ExperiencesPage() {
   return (
-    <section className="section section--alt">
+    <section className="section section--alt section--beam">
       <div className="container">
         <span className="badge">Experience</span>
         <h1 className="section-title" style={{ marginTop: "1rem" }}>
@@ -152,9 +152,7 @@ export default function ExperiencesPage() {
         <div className="grid grid--two" style={{ marginTop: "2rem" }}>
           {leadership.map((item) => (
             <div className="card" key={item.role}>
-              <span style={{ color: "var(--accent)", fontWeight: 600 }}>
-                {item.period}
-              </span>
+              <span className="text-accent" style={{ fontWeight: 600 }}>{item.period}</span>
               <h3 style={{ marginTop: "0.75rem" }}>{item.role}</h3>
               <p style={{ color: "var(--muted)" }}>{item.org}</p>
             </div>
