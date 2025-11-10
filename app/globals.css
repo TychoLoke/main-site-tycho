@@ -440,10 +440,10 @@ main {
 }
 
 .logo-grid {
-  margin-top: 3rem;
+  margin-top: 2.25rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: clamp(0.1rem, 0.5vw, 0.25rem);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(1rem, 2vw, 1.75rem);
   align-items: stretch;
 }
 
@@ -454,30 +454,57 @@ main {
 }
 
 .logo-tile {
-  background: linear-gradient(155deg, var(--surface-strong), #540008 65%);
-  border: 1px solid var(--border-inverse);
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --hover-translate: 0px;
+  --hover-scale: 1;
+  background: radial-gradient(140% 120% at 50% 0%, rgba(255, 255, 255, 0.08), transparent 65%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(117, 0, 12, 0.15) 35%, rgba(40, 0, 7, 0.65) 100%),
+    linear-gradient(155deg, var(--surface-strong), #540008 65%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-xl);
-  padding: 2.8rem 2.25rem;
+  padding: clamp(1.85rem, 3vw, 2.4rem);
   text-align: center;
-  box-shadow: 0 24px 52px rgba(84, 0, 8, 0.35);
+  box-shadow: 0 18px 42px rgba(52, 0, 6, 0.42);
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  gap: 1.1rem;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background 0.35s ease;
+  transform: perspective(900px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y)) translateY(var(--hover-translate)) scale(var(--hover-scale));
+}
+
+.logo-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 80% at 50% 0%, rgba(255, 255, 255, 0.22), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: -1;
 }
 
 .logo-tile:hover,
 .logo-tile:focus-within {
-  transform: translateY(-6px);
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 28px 56px rgba(84, 0, 8, 0.42);
+  --hover-translate: -6px;
+  --hover-scale: 1.018;
+  border-color: rgba(255, 255, 255, 0.38);
+  box-shadow: 0 32px 60px rgba(52, 0, 6, 0.55);
+}
+
+.logo-tile:hover::after,
+.logo-tile:focus-within::after {
+  opacity: 1;
 }
 
 .logo-tile__image {
-  width: clamp(240px, 26vw, 360px);
+  width: clamp(200px, 22vw, 320px);
   height: auto;
   filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.32));
 }
@@ -485,8 +512,9 @@ main {
 .logo-tile figcaption {
   margin-top: 0;
   color: rgba(255, 235, 235, 0.82);
-  font-size: 1rem;
-  letter-spacing: 0.02em;
+  font-size: 0.98rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .logo-note {
