@@ -1,5 +1,8 @@
+'use client';
+
 import Image from "next/image";
 import Link from "next/link";
+import type { MouseEvent } from "react";
 
 const trainingHighlights = [
   {
@@ -113,6 +116,32 @@ const testimonials = [
 ];
 
 export default function HomePage() {
+  const handleLogoMouseMove = (
+    event: MouseEvent<HTMLElement>
+  ) => {
+    const tile = event.currentTarget;
+    const rect = tile.getBoundingClientRect();
+    const offsetX = event.clientX - rect.left;
+    const offsetY = event.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const maxTilt = 8;
+    const rotateY = ((offsetX - centerX) / centerX) * maxTilt;
+    const rotateX = -((offsetY - centerY) / centerY) * maxTilt;
+
+    tile.style.setProperty("--tilt-x", `${rotateX.toFixed(2)}deg`);
+    tile.style.setProperty("--tilt-y", `${rotateY.toFixed(2)}deg`);
+  };
+
+  const handleLogoMouseLeave = (
+    event: MouseEvent<HTMLElement>
+  ) => {
+    const tile = event.currentTarget;
+    tile.style.removeProperty("--tilt-x");
+    tile.style.removeProperty("--tilt-y");
+  };
+
   return (
     <>
       <section className="hero">
@@ -227,7 +256,12 @@ export default function HomePage() {
           </p>
           <div className="logo-grid">
             {trustedCompanies.map((company) => (
-              <figure key={company.file} className="logo-tile">
+              <figure
+                key={company.file}
+                className="logo-tile"
+                onMouseMove={handleLogoMouseMove}
+                onMouseLeave={handleLogoMouseLeave}
+              >
                 <Image
                   src={`/logos/${company.file}`}
                   alt={`${company.name} logo`}
