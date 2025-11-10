@@ -32,7 +32,7 @@ const bonuses = [
 
 export default function AboveTheStackPage() {
   return (
-    <section className="section">
+    <section className="section section--halo">
       <div className="container">
         <span className="badge">Above The Stack</span>
         <h1 className="section-title" style={{ marginTop: "1rem" }}>
@@ -73,7 +73,7 @@ export default function AboveTheStackPage() {
               </ul>
             </div>
           </div>
-          <div className="card">
+          <div className="card card--spotlight">
             <h2 style={{ marginTop: 0 }}>Subscribe today</h2>
             <p style={{ color: "var(--muted)" }}>
               Join hundreds of MSP and channel leaders who receive Above The Stack
@@ -113,7 +113,7 @@ export default function AboveTheStackPage() {
 
         <div className="divider" />
 
-        <div className="card" style={{ textAlign: "center", padding: "2.5rem" }}>
+        <div className="card card--spotlight" style={{ textAlign: "center", padding: "2.5rem" }}>
           <h2 className="section-title" style={{ marginBottom: "1rem" }}>
             Want Above The Stack live at your event?
           </h2>
