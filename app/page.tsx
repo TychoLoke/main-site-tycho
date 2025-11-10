@@ -231,9 +231,9 @@ export default function HomePage() {
                 <Image
                   src={`/logos/${company.file}`}
                   alt={`${company.name} logo`}
-                  width={240}
-                  height={96}
-                  sizes="(max-width: 640px) 160px, 240px"
+                  width={320}
+                  height={128}
+                  sizes="(max-width: 640px) 220px, 320px"
                   className="logo-tile__image"
                 />
                 <figcaption>{company.name}</figcaption>
