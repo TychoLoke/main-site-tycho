@@ -38,6 +38,7 @@ export default function AboutPage() {
               width={900}
               height={1125}
               sizes="(max-width: 768px) 320px, 420px"
+              className="about-portrait__image"
               priority
             />
           </figure>
