@@ -120,10 +120,6 @@ export default function HomePage() {
           <div className="hero-copy">
             <div className="hero-eyebrow">
               <span className="badge badge--pulse">Innovate · Strategize · Transform</span>
-              <span className="hero-meta">
-                <span className="hero-meta__pill">MSP → AI-led Service Provider</span>
-                <span className="hero-meta__pill">MSP → Managed Intelligence Provider (MIP)</span>
-              </span>
             </div>
             <h1 className="hero-title">
               Strategic enablement for modern MSPs.
