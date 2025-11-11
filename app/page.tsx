@@ -8,9 +8,9 @@ const trainingHighlights = [
       "Leadership and operational training that matures your service catalogue, elevates CX, and readies your team for enterprise expectations."
   },
   {
-    title: "MSP to Microsoft AI Cloud Partner (MIP)",
+    title: "MSP to AI-led Service Provider",
     description:
-      "Roadmaps, compliance checklists, and sales enablement to unlock solution partner designations and co-sell benefits."
+      "Roadmaps, compliance checklists, and sales enablement to activate AI offerings and unlock fresh revenue streams."
   },
   {
     title: "MSP to Managed Intelligence Provider (MIP)",
@@ -121,7 +121,7 @@ export default function HomePage() {
             <div className="hero-eyebrow">
               <span className="badge badge--pulse">Innovate · Strategize · Transform</span>
               <span className="hero-meta">
-                <span className="hero-meta__pill">MSP → Microsoft AI Cloud Partner (MIP)</span>
+                <span className="hero-meta__pill">MSP → AI-led Service Provider</span>
                 <span className="hero-meta__pill">MSP → Managed Intelligence Provider (MIP)</span>
               </span>
             </div>
@@ -189,11 +189,11 @@ export default function HomePage() {
             <article className="card workshop-summary">
               <span className="badge">What we build together</span>
               <p className="workshop-summary__lead">
-                Build the muscle memory to become a better MSP, transition to a
-                Microsoft AI Cloud Partner, evolve toward a Managed Intelligence
-                Provider, and operationalize AI across your services. Every
-                engagement blends strategy, storytelling, and hands-on labs
-                tailored to your stack.
+                Build the muscle memory to become a better MSP, launch
+                AI-powered service lines, evolve toward a Managed Intelligence
+                Provider, and operationalize automation across your services.
+                Every engagement blends strategy, storytelling, and hands-on
+                labs tailored to your stack.
               </p>
               <ul className="checklist">
                 {workshopOutcomes.map((outcome) => (
