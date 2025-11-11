@@ -370,13 +370,6 @@ main {
   display: none;
 }
 
-.hero-meta {
-  color: var(--text-muted);
-  display: inline-flex;
-  gap: 0.35rem;
-  align-items: center;
-}
-
 .hero-title {
   margin: 0;
   font-size: clamp(2.7rem, 5.8vw, 4rem);
@@ -589,8 +582,8 @@ main {
 .logo-grid {
   margin-top: 3rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: clamp(0.05rem, 0.4vw, 0.18rem);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(0.4rem, 0.6vw, 1rem);
   align-items: stretch;
 }
 
@@ -604,7 +597,7 @@ main {
   background: linear-gradient(150deg, rgba(92, 21, 129, 0.82) 0%, rgba(255, 45, 117, 0.24) 100%);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-xl);
-  padding: 1.85rem 1.5rem;
+  padding: 2.1rem 1.8rem;
   text-align: center;
   box-shadow: 0 26px 52px rgba(26, 1, 48, 0.6);
   color: #fff;
@@ -625,16 +618,9 @@ main {
 }
 
 .logo-tile__image {
-  width: clamp(140px, 18vw, 220px);
+  width: clamp(180px, 22vw, 280px);
   height: auto;
   filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.35));
-}
-
-.logo-note {
-  margin-top: 2.5rem;
-  color: rgba(208, 198, 255, 0.72);
-  font-size: 0.95rem;
-  text-align: center;
 }
 
 .video-grid {
@@ -810,12 +796,79 @@ main {
 
 .workshop-layout {
   display: grid;
-  gap: 2.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(2rem, 5vw, 3rem);
 }
 
-.logo-grid + .logo-note {
-  margin-top: 2.5rem;
+@media (min-width: 960px) {
+  .workshop-layout {
+    grid-template-columns: minmax(0, 420px) minmax(0, 1fr);
+    align-items: stretch;
+  }
+}
+
+.workshop-summary {
+  background: linear-gradient(165deg, rgba(255, 45, 117, 0.28), rgba(127, 48, 255, 0.24));
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 28px 62px rgba(14, 0, 36, 0.58);
+  padding: clamp(2rem, 4vw, 2.75rem);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.65rem;
+  backdrop-filter: blur(24px);
+}
+
+.workshop-summary .badge {
+  width: fit-content;
+}
+
+.workshop-summary__lead {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: rgba(248, 242, 255, 0.9);
+}
+
+.workshop-summary .checklist {
+  margin: 0;
+  gap: 0.75rem;
+}
+
+.workshop-summary__actions {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.workshop-grid {
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2rem);
+  align-content: start;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+@media (min-width: 1024px) {
+  .workshop-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.workshop-card {
+  padding: clamp(1.7rem, 3vw, 2.35rem);
+  gap: 1rem;
+}
+
+.workshop-card h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--heading);
+}
+
+.workshop-card p {
+  margin: 0;
+  color: var(--text-muted);
+  line-height: 1.65;
 }
 
 .timeline {

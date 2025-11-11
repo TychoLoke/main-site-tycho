@@ -8,14 +8,14 @@ const trainingHighlights = [
       "Leadership and operational training that matures your service catalogue, elevates CX, and readies your team for enterprise expectations."
   },
   {
-    title: "MSP to Microsoft AI Cloud Partner (MIP)",
+    title: "MSP to AI-led Service Provider",
     description:
-      "Roadmaps, compliance checklists, and sales enablement to unlock solution partner designations and co-sell benefits."
+      "Roadmaps, compliance checklists, and sales enablement to activate AI offerings and unlock fresh revenue streams."
   },
   {
-    title: "AI + Automation enablement",
+    title: "MSP to Managed Intelligence Provider (MIP)",
     description:
-      "Build repeatable AI copilots, process automation, and marketing workflows that scale your delivery without adding headcount."
+      "Build intelligence-first services with automation, AI copilots, and analytics that keep clients proactive and your value unmistakable."
   },
   {
     title: "Go-to-market accelerator",
@@ -120,9 +120,6 @@ export default function HomePage() {
           <div className="hero-copy">
             <div className="hero-eyebrow">
               <span className="badge badge--pulse">Innovate · Strategize · Transform</span>
-              <span className="hero-meta">
-                <span className="text-accent">Microsoft AI Cloud Partner</span> advisor
-              </span>
             </div>
             <h1 className="hero-title">
               Strategic enablement for modern MSPs.
@@ -130,7 +127,8 @@ export default function HomePage() {
             <p className="hero-subtitle">
               I’m <span className="text-accent">Tycho Loke</span> — channel strategist, Microsoft advisor, and
               speaker. I help managed service providers modernize their services,
-              tighten security, and tell a clearer story without the noise.
+              evolve toward managed intelligence offerings, tighten security, and
+              tell a clearer story without the noise.
             </p>
             <div className="hero-actions">
               <Link href="/contact" className="button">
@@ -184,35 +182,37 @@ export default function HomePage() {
         <div className="container">
           <h2 className="section-title">Expert-led training & workshops</h2>
           <div className="workshop-layout">
-            <div>
-              <p className="section-lead">
-                Build the muscle memory to become a better MSP, transition to a
-                Microsoft AI Cloud Partner, and operationalize AI across your
-                services. Every engagement blends strategy, storytelling, and
-                hands-on labs tailored to your stack.
+            <article className="card workshop-summary">
+              <span className="badge">What we build together</span>
+              <p className="workshop-summary__lead">
+                Build the muscle memory to become a better MSP, launch
+                AI-powered service lines, evolve toward a Managed Intelligence
+                Provider, and operationalize automation across your services.
+                Every engagement blends strategy, storytelling, and hands-on
+                labs tailored to your stack.
               </p>
               <ul className="checklist">
                 {workshopOutcomes.map((outcome) => (
                   <li key={outcome}>{outcome}</li>
                 ))}
               </ul>
-            </div>
-            <div className="grid grid--two">
+              <div className="workshop-summary__actions">
+                <Link href="/services" className="button">
+                  View training menu
+                </Link>
+                <Link href="/contact" className="button button--ghost">
+                  Plan your workshop
+                </Link>
+              </div>
+            </article>
+            <div className="workshop-grid">
               {trainingHighlights.map((item) => (
-                <div className="card" key={item.title}>
+                <article className="card workshop-card" key={item.title}>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                </div>
+                </article>
               ))}
             </div>
-          </div>
-          <div className="hero-actions" style={{ marginTop: "2.5rem" }}>
-            <Link href="/services" className="button">
-              View training menu
-            </Link>
-            <Link href="/contact" className="button button--ghost">
-              Plan your workshop
-            </Link>
           </div>
         </div>
       </section>
@@ -233,18 +233,14 @@ export default function HomePage() {
                 <Image
                   src={`/logos/${company.file}`}
                   alt={`${company.name} logo`}
-                  width={320}
-                  height={128}
-                  sizes="(max-width: 640px) 220px, 320px"
+                  width={360}
+                  height={144}
+                  sizes="(max-width: 640px) 260px, 360px"
                   className="logo-tile__image"
                 />
               </figure>
             ))}
           </div>
-          <p className="logo-note">
-            For crisp results, save each partner logo as a transparent PNG or SVG sized
-            240×96 inside <code>public/logos</code> using the filenames shown above.
-          </p>
         </div>
       </section>
 
