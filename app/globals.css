@@ -607,8 +607,8 @@ main {
 .logo-grid {
   margin-top: 2.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: clamp(0.85rem, 1.5vw, 1.75rem);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1rem, 1.75vw, 2rem);
   align-items: stretch;
 }
 
@@ -619,7 +619,7 @@ main {
 
   .logo-grid {
     margin-top: 0;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -627,13 +627,17 @@ main {
   .trusted-layout {
     grid-template-columns: minmax(0, 360px) minmax(0, 1fr);
   }
+
+  .logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .logo-tile {
   background: linear-gradient(150deg, rgba(92, 21, 129, 0.82) 0%, rgba(255, 45, 117, 0.24) 100%);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: var(--radius-xl);
-  padding: clamp(2.3rem, 3vw, 2.9rem) clamp(2rem, 3vw, 2.4rem);
+  padding: clamp(2.1rem, 3vw, 2.7rem) clamp(1.8rem, 2.8vw, 2.3rem);
   text-align: center;
   box-shadow: 0 26px 52px rgba(26, 1, 48, 0.6);
   color: #fff;
@@ -654,7 +658,7 @@ main {
 }
 
 .logo-tile__image {
-  width: clamp(200px, 26vw, 340px);
+  width: min(100%, clamp(220px, 34vw, 380px));
   height: auto;
   filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.35));
 }
