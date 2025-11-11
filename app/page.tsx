@@ -219,27 +219,32 @@ export default function HomePage() {
 
       <section className="section section--halo">
         <div className="container">
-          <div className="badge">Trusted by leading teams</div>
-          <h2 className="section-title" style={{ marginTop: "1rem" }}>
-            Companies that trusted my service
-          </h2>
-          <p className="section-lead" style={{ maxWidth: "720px" }}>
-            From global vendors to high-growth MSPs, these brands have partnered
-            with me for strategy, enablement, and unforgettable event moments.
-          </p>
-          <div className="logo-grid">
-            {trustedCompanies.map((company) => (
-              <figure key={company.file} className="logo-tile">
-                <Image
-                  src={`/logos/${company.file}`}
-                  alt={`${company.name} logo`}
-                  width={360}
-                  height={144}
-                  sizes="(max-width: 640px) 260px, 360px"
-                  className="logo-tile__image"
-                />
-              </figure>
-            ))}
+          <div className="trusted-layout">
+            <div className="trusted-copy">
+              <div className="badge">Trusted by leading teams</div>
+              <h2 className="section-title">
+                Companies that trusted my service
+              </h2>
+              <p className="section-lead">
+                From global vendors to high-growth MSPs, these brands have
+                partnered with me for strategy, enablement, and unforgettable
+                event moments.
+              </p>
+            </div>
+            <div className="logo-grid">
+              {trustedCompanies.map((company) => (
+                <figure key={company.file} className="logo-tile">
+                  <Image
+                    src={`/logos/${company.file}`}
+                    alt={`${company.name} logo`}
+                    width={420}
+                    height={180}
+                    sizes="(max-width: 900px) 320px, 420px"
+                    className="logo-tile__image"
+                  />
+                </figure>
+              ))}
+            </div>
           </div>
         </div>
       </section>
