@@ -234,18 +234,14 @@ export default function HomePage() {
                 <Image
                   src={`/logos/${company.file}`}
                   alt={`${company.name} logo`}
-                  width={320}
-                  height={128}
-                  sizes="(max-width: 640px) 220px, 320px"
+                  width={360}
+                  height={144}
+                  sizes="(max-width: 640px) 260px, 360px"
                   className="logo-tile__image"
                 />
               </figure>
             ))}
           </div>
-          <p className="logo-note">
-            For crisp results, save each partner logo as a transparent PNG or SVG sized
-            240×96 inside <code>public/logos</code> using the filenames shown above.
-          </p>
         </div>
       </section>
 
