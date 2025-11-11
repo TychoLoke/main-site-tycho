@@ -184,8 +184,9 @@ export default function HomePage() {
         <div className="container">
           <h2 className="section-title">Expert-led training & workshops</h2>
           <div className="workshop-layout">
-            <div>
-              <p className="section-lead">
+            <article className="card workshop-summary">
+              <span className="badge">What we build together</span>
+              <p className="workshop-summary__lead">
                 Build the muscle memory to become a better MSP, transition to a
                 Microsoft AI Cloud Partner, and operationalize AI across your
                 services. Every engagement blends strategy, storytelling, and
@@ -196,23 +197,23 @@ export default function HomePage() {
                   <li key={outcome}>{outcome}</li>
                 ))}
               </ul>
-            </div>
-            <div className="grid grid--two">
+              <div className="workshop-summary__actions">
+                <Link href="/services" className="button">
+                  View training menu
+                </Link>
+                <Link href="/contact" className="button button--ghost">
+                  Plan your workshop
+                </Link>
+              </div>
+            </article>
+            <div className="workshop-grid">
               {trainingHighlights.map((item) => (
-                <div className="card" key={item.title}>
+                <article className="card workshop-card" key={item.title}>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
-                </div>
+                </article>
               ))}
             </div>
-          </div>
-          <div className="hero-actions" style={{ marginTop: "2.5rem" }}>
-            <Link href="/services" className="button">
-              View training menu
-            </Link>
-            <Link href="/contact" className="button button--ghost">
-              Plan your workshop
-            </Link>
           </div>
         </div>
       </section>
