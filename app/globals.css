@@ -373,8 +373,34 @@ main {
 .hero-meta {
   color: var(--text-muted);
   display: inline-flex;
-  gap: 0.35rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   align-items: center;
+}
+
+.hero-meta__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(11, 0, 28, 0.35);
+  color: var(--text);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.74rem;
+  backdrop-filter: blur(14px);
+}
+
+.hero-meta__pill::before {
+  content: "";
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--accent) 0%, var(--accent-secondary) 100%);
+  box-shadow: 0 0 12px rgba(255, 45, 117, 0.55);
 }
 
 .hero-title {

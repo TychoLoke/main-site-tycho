@@ -13,9 +13,9 @@ const trainingHighlights = [
       "Roadmaps, compliance checklists, and sales enablement to unlock solution partner designations and co-sell benefits."
   },
   {
-    title: "AI + Automation enablement",
+    title: "MSP to Managed Intelligence Provider (MIP)",
     description:
-      "Build repeatable AI copilots, process automation, and marketing workflows that scale your delivery without adding headcount."
+      "Build intelligence-first services with automation, AI copilots, and analytics that keep clients proactive and your value unmistakable."
   },
   {
     title: "Go-to-market accelerator",
@@ -121,7 +121,8 @@ export default function HomePage() {
             <div className="hero-eyebrow">
               <span className="badge badge--pulse">Innovate · Strategize · Transform</span>
               <span className="hero-meta">
-                <span className="text-accent">Microsoft AI Cloud Partner</span> advisor
+                <span className="hero-meta__pill">MSP → Microsoft AI Cloud Partner (MIP)</span>
+                <span className="hero-meta__pill">MSP → Managed Intelligence Provider (MIP)</span>
               </span>
             </div>
             <h1 className="hero-title">
@@ -130,7 +131,8 @@ export default function HomePage() {
             <p className="hero-subtitle">
               I’m <span className="text-accent">Tycho Loke</span> — channel strategist, Microsoft advisor, and
               speaker. I help managed service providers modernize their services,
-              tighten security, and tell a clearer story without the noise.
+              evolve toward managed intelligence offerings, tighten security, and
+              tell a clearer story without the noise.
             </p>
             <div className="hero-actions">
               <Link href="/contact" className="button">
@@ -188,9 +190,10 @@ export default function HomePage() {
               <span className="badge">What we build together</span>
               <p className="workshop-summary__lead">
                 Build the muscle memory to become a better MSP, transition to a
-                Microsoft AI Cloud Partner, and operationalize AI across your
-                services. Every engagement blends strategy, storytelling, and
-                hands-on labs tailored to your stack.
+                Microsoft AI Cloud Partner, evolve toward a Managed Intelligence
+                Provider, and operationalize AI across your services. Every
+                engagement blends strategy, storytelling, and hands-on labs
+                tailored to your stack.
               </p>
               <ul className="checklist">
                 {workshopOutcomes.map((outcome) => (
