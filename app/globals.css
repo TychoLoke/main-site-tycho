@@ -1066,6 +1066,7 @@ main {
 .form-grid {
   display: grid;
   gap: 1.5rem;
+  color-scheme: dark;
 }
 
 .form-row {
@@ -1089,6 +1090,11 @@ form select {
   color: var(--text);
   transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
   backdrop-filter: blur(12px);
+}
+
+form select option {
+  background-color: rgba(19, 9, 45, 0.92);
+  color: var(--text);
 }
 
 form input:focus,
