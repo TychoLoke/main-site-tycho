@@ -113,6 +113,11 @@ export default function ExperiencesPage() {
         <h1 className="section-title" style={{ marginTop: "1rem" }}>
           Proven impact across consulting, pre-sales, and community leadership
         </h1>
+        <p className="section-lead" style={{ marginTop: "0.5rem" }}>
+          A snapshot of the roles, councils, and communities that shape how I
+          design programmes for MSPs and vendors. It’s where strategy, delivery,
+          and storytelling intersect.
+        </p>
 
         <div className="timeline" style={{ marginTop: "3rem" }}>
           {experiences.map((experience) => (

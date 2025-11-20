@@ -16,11 +16,11 @@ export default function AboutPage() {
           <div className="about-hero-copy">
             <span className="badge">About Tycho</span>
             <h1 className="section-title">
-              A passion for IT, innovation, and helping MSPs grow
+              Human-first strategist for modern MSPs and vendor teams
             </h1>
             <p className="about-lead">
-              Channel strategist, solutions engineer, and speaker helping MSPs build resilient Microsoft practices with clarity,
-              creativity, and heart.
+              I blend strategy, pre-sales engineering, and facilitation so MSPs can move with clarity. Expect real talk, usable
+              templates, and a partnership that keeps energy high without adding noise.
             </p>
             <div className="stat-grid about-stats">
               {stats.map((stat) => (
@@ -47,21 +47,21 @@ export default function AboutPage() {
         <div className="about-content">
           <div className="rich-text about-rich-text">
             <p>
-              Technology has always been at the core of my journey. Over the past
-              five years in the channel I’ve gone from hands-on engineer to
-              trusted advisor for MSPs, ISVs, and vendor communities looking to
-              build resilient, profitable practices.
+              My career began as a hands-on engineer building resilient
+              infrastructure. Today, I advise MSPs, ISVs, and vendor communities
+              on how to translate technical excellence into memorable customer
+              experiences and revenue growth.
             </p>
             <p>
-              Today, I serve as Channel Pre-Sales Solutions Engineer at AvePoint
-              where I guide partners through automation, security baselines, and
-              Microsoft 365 excellence. Previously at PeopleRock, I blended
-              consulting and pre-sales strategy to transform cloud adoption and
-              customer experience.
+              At AvePoint I serve as Channel Pre-Sales Solutions Engineer,
+              aligning automation, compliance, and Microsoft 365 guardrails with
+              partner go-to-market plans. Before that at PeopleRock I blended
+              consulting and pre-sales to accelerate cloud adoption and customer
+              experience programmes.
             </p>
             <p>
               Beyond architecture and process, I love connecting with people. You
-              can find me on stage across Europe, leading community initiatives
+              can find me on stages across Europe, leading community initiatives
               as the owner of Above The Stack, co-founding the {" "}
               <Link href="https://www.hackerslove.com" target="_blank">
                 Hackers Love Community

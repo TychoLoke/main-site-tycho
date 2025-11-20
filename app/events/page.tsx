@@ -91,8 +91,8 @@ export default function EventsPage() {
         </h1>
         <p className="section-lead">
           I regularly speak, host, and contribute to events that elevate MSP and
-          IT communities. Explore upcoming appearances and suggest where I should
-          go next.
+          IT communities. Browse what’s next, or invite me to design something
+          tailored for your audience.
         </p>
 
         <div className="grid grid--two">

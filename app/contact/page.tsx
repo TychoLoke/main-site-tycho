@@ -38,19 +38,19 @@ export default function ContactPage() {
       <div className="container">
         <span className="badge">Contact</span>
         <h1 className="section-title" style={{ marginTop: "1rem" }}>
-          Partner with Tycho Loke for your next initiative
+          Start a calm, purposeful collaboration
         </h1>
         <p className="section-lead">
-          Share a few details about your event, team, or programme. I’ll respond
-          with availability, next steps, and any resources you might need to
-          make a confident decision.
+          Share a few details about your event, team, or programme. I’ll reply
+          with availability, a short plan, and any resources you need to make a
+          confident decision.
         </p>
         <div className="contact-grid">
           <div className="contact-card">
             <h3>Direct contact</h3>
             <p className="contact-card-subtitle">
-              Prefer a direct introduction? Feel free to reach out using any of
-              the channels below.
+              Prefer a direct introduction? Reach out anytime using the details
+              below and I’ll personally follow up.
             </p>
             <dl className="contact-card-list">
               <div>

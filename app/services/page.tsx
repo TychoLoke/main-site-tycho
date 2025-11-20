@@ -100,13 +100,13 @@ export default function ServicesPage() {
       <div className="container">
         <span className="badge">Services</span>
         <h1 className="section-title" style={{ marginTop: "1rem" }}>
-          With a passion for technology and strategy, I deliver experiences that
-          inspire, empower, and create results.
+          Calm, confident delivery for teams that need to move fast
         </h1>
         <p className="section-lead">
-          From keynotes and panels to immersive training and advisory, each
-          engagement is intentionally designed to shift mindsets and unlock
-          tangible outcomes for MSPs, vendors, and IT teams.
+          From keynotes and panels to immersive training and advisory, every
+          engagement is designed to cut through noise and give your team a
+          repeatable rhythm. We focus on outcomes you can measure — adoption,
+          enablement, and momentum.
         </p>
 
         <div className="grid grid--two">

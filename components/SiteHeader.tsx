@@ -13,7 +13,7 @@ const navItems = [
   { href: "/contact", label: "Contact" }
 ];
 
-const primaryCta = { href: "/contact", label: "Book Tycho" };
+const primaryCta = { href: "/contact", label: "Start a project" };
 
 export function SiteHeader() {
   const pathname = usePathname();

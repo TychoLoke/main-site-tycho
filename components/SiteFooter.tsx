@@ -31,8 +31,8 @@ export function SiteFooter() {
               Tycho Loke
             </Link>
             <p>
-              Helping MSPs innovate faster, protect smarter, and build remarkable customer experiences across Microsoft,
-              security, and automation.
+              Helping MSPs and vendors find calm, confident momentum with Microsoft-first strategy, security clarity, and
+              storytelling that resonates.
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export function SiteFooter() {
 
           <div className="footer-newsletter">
             <h3>Newsletter</h3>
-            <p>Subscribe for Above The Stack insights on GTM, security, and the future of managed services.</p>
+            <p>Subscribe for Above The Stack insights on GTM, security, and automation — delivered with practical next steps.</p>
             <form className="newsletter" action="https://formspree.io/f/mwkgygaw" method="post">
               <label className="sr-only" htmlFor="footer-email">
                 Email address

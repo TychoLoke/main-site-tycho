@@ -1,34 +1,34 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const trainingHighlights = [
+const focusAreas = [
   {
-    title: "Become a better MSP",
+    title: "Vision to velocity",
     description:
-      "Leadership and operational training that matures your service catalogue, elevates CX, and readies your team for enterprise expectations."
+      "Translate ambition into an operating rhythm — GTM positioning, pricing, and a cadence that keeps everyone accountable."
   },
   {
-    title: "MSP to AI-led Service Provider",
+    title: "Operational calm",
     description:
-      "Roadmaps, compliance checklists, and sales enablement to activate AI offerings and unlock fresh revenue streams."
+      "Blueprints for delivery, governance, and security that reduce chaos while making your customer experience feel effortless."
   },
   {
-    title: "MSP to Managed Intelligence Provider (MIP)",
+    title: "Intelligence-led services",
     description:
-      "Build intelligence-first services with automation, AI copilots, and analytics that keep clients proactive and your value unmistakable."
+      "Activate AI copilots, automation, and analytics with guardrails so you launch smart offers without risking trust."
   },
   {
-    title: "Go-to-market accelerator",
+    title: "Narratives that convert",
     description:
-      "Positioning, packaging, and storytelling labs that help your team sell modern Microsoft, security, and managed services confidently."
+      "Story-first workshops that teach technical teams to speak value, not features — for keynotes, sales desks, and campaigns."
   }
 ];
 
 const workshopOutcomes = [
-  "Executive-ready roadmaps aligned to revenue targets",
-  "Playbooks, templates, and slide decks you can co-brand",
-  "Hands-on labs tailored to your tools and stack",
-  "Performance metrics so improvements stay measurable"
+  "Clear service menus and pricing stories that sales and delivery can repeat",
+  "Co-branded assets: decks, playbooks, and templates ready to ship",
+  "Labs crafted around your stack, not a generic slide deck",
+  "Momentum metrics so wins stay visible across leadership"
 ];
 
 const heroImage = {
@@ -78,25 +78,6 @@ const videoShowcase = [
   }
 ];
 
-const leadershipHighlights = [
-  {
-    title: "Community Hackers Love",
-    role: "Co-Founder",
-    description:
-      "Building a global collective of security storytellers and creators who champion human-first cyber education.",
-    href: "https://www.hackerslove.com",
-    cta: "Visit Hackers Love"
-  },
-  {
-    title: "Above The Stack",
-    role: "Founder",
-    description:
-      "Designing the channel enablement platform that helps MSP leaders ship smarter GTM plays and partnerships.",
-    href: "/abovethestack",
-    cta: "Explore Above The Stack"
-  }
-];
-
 const testimonials = [
   {
     quote:
@@ -119,16 +100,16 @@ export default function HomePage() {
         <div className="container hero-grid">
           <div className="hero-copy">
             <div className="hero-eyebrow">
-              <span className="badge badge--pulse">Innovate · Strategize · Transform</span>
+              <span className="badge badge--pulse">Calm, confident growth</span>
             </div>
             <h1 className="hero-title">
-              Strategic enablement for modern MSPs.
+              Strategic enablement for modern MSPs — without the noise.
             </h1>
             <p className="hero-subtitle">
-              I’m <span className="text-accent">Tycho Loke</span> — channel strategist, Microsoft advisor, and
-              speaker. I help managed service providers modernize their services,
-              evolve toward managed intelligence offerings, tighten security, and
-              tell a clearer story without the noise.
+              I’m <span className="text-accent">Tycho Loke</span>, a channel strategist and speaker who mixes
+              Microsoft expertise with story-first enablement. Together we’ll
+              simplify your offer, build secure foundations, and ship experiences
+              your customers remember.
             </p>
             <div className="hero-actions">
               <Link href="/contact" className="button">
@@ -155,41 +136,55 @@ export default function HomePage() {
 
       <section className="section section--halo">
         <div className="container">
-          <h2 className="section-title">Community leadership</h2>
-          <p className="section-lead">
-            Beyond the stage, I invest in platforms that elevate cybersecurity and channel innovators through collaboration and storytelling.
-          </p>
-          <div className="grid grid--two">
-            {leadershipHighlights.map((item) => (
-              <article className="card" key={item.title}>
-                <h3>{item.title}</h3>
-                <p className="badge" style={{ margin: "0.75rem 0" }}>
-                  {item.role}
-                </p>
-                <p>{item.description}</p>
-                <div style={{ marginTop: "1.5rem" }}>
-                  <Link href={item.href} className="button" target={item.href.startsWith("http") ? "_blank" : undefined} rel={item.href.startsWith("http") ? "noreferrer" : undefined}>
-                    {item.cta}
-                  </Link>
-                </div>
-              </article>
-            ))}
+          <div className="grid grid--two" style={{ alignItems: "center" }}>
+            <div className="section-annotation">
+              <span className="badge">Signal over noise</span>
+              <h2 className="section-title" style={{ marginBottom: "0.5rem" }}>
+                The calm operating system for bold MSPs
+              </h2>
+              <p className="section-lead" style={{ marginBottom: 0 }}>
+                Every engagement is designed to remove clutter, give your team a
+                repeatable rhythm, and make customers feel the difference.
+              </p>
+            </div>
+            <div className="card card--spotlight">
+              <h3 style={{ marginTop: 0 }}>What partners lean on</h3>
+              <ul className="checklist" style={{ marginTop: "0.75rem" }}>
+                <li>Trusted facilitation for summits, keynotes, and leadership offsites.</li>
+                <li>Modern Microsoft playbooks that balance security, automation, and experience.</li>
+                <li>Clear GTM stories that move prospects without jargon.</li>
+                <li>Templates, prompts, and visuals you can reuse instantly.</li>
+              </ul>
+              <div className="hero-actions" style={{ marginTop: "0.5rem" }}>
+                <Link href="/services" className="button">
+                  Explore services
+                </Link>
+                <Link href="/about" className="button button--ghost">
+                  Meet Tycho
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section section--alt section--beam">
         <div className="container">
-          <h2 className="section-title">Expert-led training & workshops</h2>
+          <div className="hero-eyebrow" style={{ marginBottom: "0.75rem" }}>
+            <span className="badge">Enablement, simplified</span>
+          </div>
+          <h2 className="section-title">Frameworks you can actually use</h2>
+          <p className="section-lead">
+            Workshops, advisory sprints, and keynotes that swap hype for
+            practicality. We co-design the assets, train your team to present
+            them, and give you clarity on the next move.
+          </p>
           <div className="workshop-layout">
             <article className="card workshop-summary">
-              <span className="badge">What we build together</span>
+              <span className="badge">What we ship</span>
               <p className="workshop-summary__lead">
-                Build the muscle memory to become a better MSP, launch
-                AI-powered service lines, evolve toward a Managed Intelligence
-                Provider, and operationalize automation across your services.
-                Every engagement blends strategy, storytelling, and hands-on
-                labs tailored to your stack.
+                A calm plan for the next 90 days, a modular story your team can
+                deliver, and automation guardrails that protect trust.
               </p>
               <ul className="checklist">
                 {workshopOutcomes.map((outcome) => (
@@ -198,15 +193,15 @@ export default function HomePage() {
               </ul>
               <div className="workshop-summary__actions">
                 <Link href="/services" className="button">
-                  View training menu
+                  See the menu
                 </Link>
                 <Link href="/contact" className="button button--ghost">
-                  Plan your workshop
+                  Plan a session
                 </Link>
               </div>
             </article>
             <div className="workshop-grid">
-              {trainingHighlights.map((item) => (
+              {focusAreas.map((item) => (
                 <article className="card workshop-card" key={item.title}>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
@@ -219,18 +214,15 @@ export default function HomePage() {
 
       <section className="section section--halo">
         <div className="container">
-          <div className="trusted-layout">
-            <div className="trusted-copy">
-              <div className="badge">Trusted by leading teams</div>
-              <h2 className="section-title">
-                Companies that trusted my service
-              </h2>
+            <div className="trusted-layout">
+              <div className="trusted-copy">
+                <div className="badge">Trusted by leading teams</div>
+              <h2 className="section-title">Brands that bring me in</h2>
               <p className="section-lead">
-                From global vendors to high-growth MSPs, these brands have
-                partnered with me for strategy, enablement, and unforgettable
-                event moments.
+                Global vendors, fast-moving MSPs, and communities rely on me to
+                keep sessions sharp, actionable, and human.
               </p>
-            </div>
+              </div>
             <div className="logo-grid">
               {trustedCompanies.map((company) => (
                 <figure key={company.file} className="logo-tile">
@@ -251,27 +243,45 @@ export default function HomePage() {
 
       <section className="section section--alt section--beam">
         <div className="container">
-          <h2 className="section-title">Strategic speaking engagements</h2>
+          <div className="hero-eyebrow" style={{ marginBottom: "0.75rem" }}>
+            <span className="badge">On stage & on camera</span>
+          </div>
+          <h2 className="section-title">Talks that make complex topics feel simple</h2>
           <p className="section-lead">
-            Inspire and empower your MSP or IT community with talks on Microsoft
-            technologies, tech marketing, automation, and security. I bring
-            high-energy storytelling with practical playbooks you can activate the
-            next day.
+            I combine high-energy storytelling with playbooks audiences can
+            deploy the same week. Expect clarity, interaction, and resources
+            that keep the conversation moving.
           </p>
-          <div className="card">
-            <h3>Signature keynotes & panels</h3>
-            <div className="rich-text">
-              <ul>
-                <li>Modern MSP GTM: from positioning to recurring revenue plays.</li>
-                <li>Security-first service design built on Microsoft cloud.</li>
-                <li>The power trio: data classification, access control, and AI.</li>
-                <li>Human-led cybersecurity culture and communication.</li>
-              </ul>
+          <div className="grid grid--two">
+            <div className="card">
+              <h3>Signature keynotes</h3>
+              <div className="rich-text">
+                <ul>
+                  <li>Modern MSP GTM: positioning, packaging, and recurring revenue plays.</li>
+                  <li>Security-first service design built on Microsoft cloud.</li>
+                  <li>The power trio: data classification, access control, and AI.</li>
+                  <li>Human-led cybersecurity culture and communication.</li>
+                </ul>
+              </div>
+              <div style={{ marginTop: "1.25rem" }}>
+                <Link href="/services" className="button">
+                  Speaking menu
+                </Link>
+              </div>
             </div>
-            <div style={{ marginTop: "1.5rem" }}>
-              <Link href="/services" className="button">
-                View speaking menu
-              </Link>
+            <div className="card card--spotlight">
+              <h3>How we prepare</h3>
+              <ul className="checklist">
+                <li>Audience interviews to tune every example.</li>
+                <li>Run of show planning with your production crew.</li>
+                <li>Accessible visuals, captions, and promo clips.</li>
+                <li>Follow-up prompts and resources for attendees.</li>
+              </ul>
+              <div style={{ marginTop: "0.5rem" }}>
+                <Link href="/events" className="button button--ghost">
+                  See events
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -280,11 +290,11 @@ export default function HomePage() {
       <section className="section section--halo">
         <div className="container">
           <div className="badge">Case studies & spotlights</div>
-          <h2 className="section-title">Take a look at my work</h2>
+          <h2 className="section-title">Recent sessions & media moments</h2>
           <p className="section-lead">
-            Dive into a sample of keynotes, webinars, and marketplace enablement
-            projects. Each story highlights the blend of strategy, storytelling,
-            and technical depth your audience can expect.
+            A snapshot of keynotes, webinars, and enablement projects. Each one
+            blends strategy, storytelling, and technical depth your audience can
+            apply.
           </p>
           <div className="video-grid">
             {videoShowcase.map((item) => (
@@ -338,12 +348,12 @@ export default function HomePage() {
         <div className="container">
           <div className="card card--spotlight" style={{ textAlign: "center", padding: "3rem" }}>
             <h2 className="section-title" style={{ marginBottom: "1rem" }}>
-              Ready to elevate your MSP brand and delivery?
+              Ready to simplify, sharpen, and ship?
             </h2>
             <p className="section-lead" style={{ margin: "0 auto 2rem" }}>
-              Let’s collaborate on your next keynote, training program, or
-              automation initiative. I create experiences that combine strategic
-              clarity with technical excellence.
+              Let’s co-design your next keynote, enablement sprint, or
+              automation initiative. I bring structure, storytelling, and
+              Microsoft-first expertise so your team can lead with confidence.
             </p>
             <div className="hero-actions" style={{ justifyContent: "center" }}>
               <Link href="/contact" className="button">
