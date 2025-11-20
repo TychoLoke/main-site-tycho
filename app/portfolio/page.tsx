@@ -100,10 +100,9 @@ export default function PortfolioPage() {
           A snapshot of talks, collaborations, and media features
         </h1>
         <p className="section-lead">
-          From global stages and community meetups to case studies and podcasts,
-          here’s a glimpse into how I help MSPs and tech leaders embrace modern
-          work, security, and GTM excellence. Browse the reels, explore themed
-          collections, and reach out for a tailored media pack.
+          Curated reels, sessions, and collaborations that show how strategy and
+          storytelling land on stage. Browse, share with your team, and if you
+          need a tailored media pack just ask.
         </p>
 
         <div className="video-grid">

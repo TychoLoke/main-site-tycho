@@ -36,7 +36,7 @@ export default function AboveTheStackPage() {
       <div className="container">
         <span className="badge">Above The Stack</span>
         <h1 className="section-title" style={{ marginTop: "1rem" }}>
-          Your unfair advantage for MSP GTM, security, and automation
+          Calm, actionable intelligence for MSP GTM, security, and automation
         </h1>
         <p className="section-lead">
           Above The Stack is my newsletter and community designed for MSP leaders
